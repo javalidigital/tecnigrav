@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="share_1_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="17px" height="14px" viewBox="0 0 17 14" enable-background="new 0 0 17 14" xml:space="preserve">
+<g id="share">
+	<g>
+		<path fill-rule="evenodd" clip-rule="evenodd" fill="#444444" d="M11.997,11.996H2.004V3.979h1.882l1.897-1.972H0.846
+			C0.378,2.007,0,2.385,0,2.852v10.303C0,13.621,0.378,14,0.846,14h12.31c0.468,0,0.846-0.379,0.846-0.846V8.986l-2.004,1.547
+			V11.996z M10.988,5.962v2.821l5.348-4.268l-5.348-4.287v2.782c-6.762,0-6.95,6.59-6.95,6.59C5.953,6.457,7.318,5.962,10.988,5.962
+			z"/>
+	</g>
+</g>
+</svg>

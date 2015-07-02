@@ -1,0 +1,242 @@
+
+.color-pink a {color:#c3325f;}
+.color-pink a:hover {color:#aa1946;}
+.color-pink .wp-pagenavi .prevpostslink:hover,
+.color-pink .wp-pagenavi .color-pink .nextpostslink:hover,
+.color-pink .wp-pagenavi .prev:hover,
+.color-pink .wp-pagenavi .next:hover{background:#c3325f;color:#FFF!important;}
+.color-pink ul.accordion li > a {color:#333;}
+.color-pink ul.accordion li > a:hover{color:#c3325f;}
+.color-pink .portfolio .filters ul a:hover{background:#c3325f;color:#fff;border:1px solid #c3325f;text-decoration:none;}
+.color-pink .portfolio .filters ul a.selected{background:#c3325f;color:#fff;border:none;}
+.color-pink .page-portfolio .foot>p>a:hover{text-decoration:none;background:#c3325f;}
+.color-pink .single .comment-author a.comment-reply-link{color:#c3325f;}
+.color-pink .related article h3 a:hover{color:#c3325f;}
+.color-pink .content aside a{color:#c3325f;}
+.color-pink .pricing-plan.selected h2 {color: #fff;}
+.color-pink .pricing-plan.selected .pricing-lead{background:#c3325f;box-shadow:none;}
+.color-pink .pricing-plan.selected{border-top:2px solid #c3325f;background:#70c14a;border-right:none!important;}
+.color-pink table.pricing tr.action td:first-child a{background:none;color:#c3325f;}
+.color-pinktable.pricing .button:hover{background:#c3325f!important;color:#fff;}
+.color-pink .more-detail a:hover{background:#c3325f;color:#fff;text-decoration:none;}
+.color-pink .widget_newsletterwidget {border-color: #dd4c79;}
+.color-pink .widget_newsletterwidget .newsletter-submit:hover,
+.color-pink .newsletter-widget .newsletter-submit:hover{background-color:#c3325f;}
+.color-pink .tabbed ul.tabs li a:hover{color:#fff;background:#c3325f;}
+.color-pink .counter li.days span.num{background:#c3325f;}
+.color-pink .content aside section ul.menu li.current-menu-item > a{background:none!important;color:#c3325f!important;}
+.color-pink .widget_newsletterwidget a.btn:hover{color:#fff;background-color:#c3325f;}
+.color-pink .woocommerce-pagination ul li .prev:hover,
+.color-pink .woocommerce-pagination ul li .next:hover{background:#c3325f;color:#fff;}
+.color-pink.cart .woocommerce .product-name > a {color:#c3325f;}
+.color-pink.cart .cart_totals .checkout-button.button.alt:hover {background-color:#c3325f;}
+.color-pink .lead-page .newsletter-submit:hover{background:#c3325f;}
+.color-pink .woocommerce form .shop_table.cart .actions > p .checkout-button:hover,
+.color-pink .woocommerce form .shop_table.cart .actions > .checkout-button:hover{background-color:#c3325f;}
+#place_order:hover{background-color:#c3325f;}
+.color-pink .login .form-row .button:hover{background:#c3325f;}
+.color-pink .save-address-button:hover{background:#c3325f;}
+.color-pink .wpcf7 .wpcf7-form [type="submit"]:hover{background:#c3325f;}
+.color-pink .post-password-form input[type=submit]:hover{background:#c3325f;}
+
+.color-pink ::-moz-selection{background:#dd4c79;}
+.color-pink ::selection{background:#dd4c79;}
+.color-pink a.button,
+.color-pink button{background:#dd4c79; color: #fff;}
+.color-pink a.button:hover,
+.color-pink button:hover{color: #fff;}
+.color-pink .cart .add_to_cart_button.button.product_type_simple, .color-pink .button.product_type_variable {background: none;}
+.color-pink blockquote{border-color: #dd4c79;}
+.color-pink ul.tick3 li:before{color:#dd4c79;}
+.color-pink ul.tick4 li:before{background:#dd4c79;}
+.color-pink .wp-pagenavi .prevpostslink,
+.wp-pagenavi .prev{background:#dd4c79;}
+.color-pink .wp-pagenavi .nextpostslink,
+.color-pink .wp-pagenavi .next{background:#dd4c79;}
+.color-pink .slider11 article div>ul li:before{color:#dd4c79;}
+.color-pink .page-portfolio .foot>p>a{background:#dd4c79;}
+.color-pink .page-portfolio .filters ul a:hover{background:#dd4c79; border-color: #dd4c79;}
+.color-pink .post-meta a, 
+.color-pink .tags a {color: #333;}
+.color-pink .post-meta a:hover,
+.tags a:hover{color:#dd4c79;}
+.color-pink .single .tags a:hover{background:#dd4c79;border-color: #dd4c79;}
+.color-pink .single .post-author{border-color: #dd4c79;}
+.color-pink .comment-form ul li em{color:#dd4c79;}
+.color-pink .post-author h3 a:hover{color:#dd4c79;}
+.color-pink #review_form .comment-form .required{color:#dd4c79;}
+.color-pink a.btn {color: #fff;}
+.color-pink a.btn:hover{color: #fff;}
+.color-pink a.btn.white {color: #333;}
+.color-pink a.btn.light-gray {color: #444;}
+.color-pink a.btn.light.white {color: #fff;}
+.color-pink a.btn.light.white:hover {color: #333;}
+.color-pink a.btn.custom {background: #dd4c79;}
+.color-pink a.btn.custom:hover {background: #c3325f;}
+.color-pink p.progress>span.fill{background:#dd4c79;}
+.color-pink .pricing-plan{border-top-color: #dd4c79; border-right-color: #e8e8e8;}
+.color-pink .pricing-plan h2{color:#dd4c79;}
+.color-pink .pricing-plan.selected{border-top-color: #c3325f;background:#dd4c79;}
+.color-pink table.pricing .button{background:#dd4c79!important;}
+.color-pink .e404 button{background:#dd4c79;}
+.color-pink .call-out{border-top-color:#dd4c79;}
+.color-pink .postlist-blog .quote-typography p{color:#dd4c79;}
+.color-pink .more-detail a{background:#dd4c79; color: #fff;}
+.color-pink .postlist-blog .quote-text{color:#dd4c79;}
+
+/* quote.svg */
+.color-pink .postlist.postlist-blog .post.item .quote-typography,
+.color-pink .postlist-blog .post-detail .quote-text { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px"><g><g><path fill-rule="evenodd" clip-rule="evenodd" fill="%23dd4c79" d="M6.225-0.012H2.73L0,6.97V16h6.99V6.97H3.495L6.225-0.012z M12.494,6.97l2.73-6.981H11.73L9,6.97V16h6.99V6.97H12.494z"/></g></g></svg>');}
+
+/* quote2.svg */
+.color-pink .hp-quote,
+.color-pink blockquote.quote,
+.color-pink .quote-typography,
+.color-pink .postlist-blog .quote-typography,
+.color-pink .postlist-blog .quote-text { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="26px" height="24px"><g><g><path fill="%23dd4c79" d="M10,0H4L0,10v14h12V10H6L10,0z M20,10l4-10h-6l-4,10v14h12V10H20z"/></g></g></svg>');}
+
+
+.color-pink .widget_newsletterwidget .newsletter-submit,
+.color-pink .newsletter-widget .newsletter-submit{background-color:#dd4c79;}
+.color-pink footer .newsletter-widget .newsletter-submit{background-color:#dd4c79;}
+.color-pink .content aside div.tagcloud a:hover,
+.color-pink footer .tagcloud a:hover{background:#dd4c79;border-color: #dd4c79;}
+.color-pink table#wp-calendar tbody td a:hover{background:#dd4c79;}
+.color-pink .tabbed ul.tabs{background-color:#dd4c79;}
+.color-pink .tabbed ul.tabs li a{background:#dd4c79;}
+.color-pink .tabbed ul.tabs li.tab-best a{background:#dd4c79;}
+.color-pink .ui-datepicker td a:hover,
+.color-pink .ui-datepicker td a.ui-state-highlight{background:#dd4c79!important;}
+.color-pink .top-border {border-color:#dd4c79;}
+.color-pink .left-border {border-color:#dd4c79;}
+.color-pink .animated-milestone{color:#dd4c79;}
+.color-pink .tabbed.alt2 ul.tabs{border-top-color: #dd4c79; background: none;}
+.color-pink .tabbed.alt2 ul.tabs li a {background: none;}
+.color-pink .tabbed.alt2 ul.tabs li a:hover, .tabbed.alt2 ul.tabs li a:hover .fa:before { background: #f6f6f6; color:#dd4c79; }
+.color-pink .tabbed.alt2.alt .tabs{border-left:4px solid #dd4c79;}
+.color-pink .counter li.days{background:#dd4c79;}
+.color-pink .counter.counter-2 li.days {background: none;}
+.color-pink .counter.counter-2 li.days span.num{color:#dd4c79;background: none;}
+.color-pink .coming-soon input.newsletter-submit[type="submit"]{background-color: #dd4c79;border-color:#dd4c79;}
+.color-pink .tabbed.alt3 ul.tabs {background: none;}
+.color-pink .tabbed.alt3 ul.tabs li a {background: none;}
+.color-pink .tabbed.alt3 ul.tabs li a:hover{box-shadow:0 -4px 0 0 #dd4c79 inset;color:#dd4c79;}
+.color-pink .woocommerce-pagination ul li .prev{background:#dd4c79;}
+.color-pink .woocommerce-pagination ul li .next{background:#dd4c79;}
+.color-pink.cart .cart_totals{border-color: #dd4c79;}
+.color-pink.cart .cart_totals .checkout-button.button.alt{background-color: #dd4c79;}
+.color-pink .ui-slider .ui-slider-handle:hover{border-color:#dd4c79;}
+.color-pink .ui-slider .ui-slider-range{background:#dd4c79;}
+.color-pink .comment-form .required{color:#dd4c79;}
+.lead-page .newsletter-submit{background:#dd4c79;}
+.lead-page .box-default h2{color:#dd4c79;}
+.color-pink .woocommerce form .shop_table.cart .actions > p .checkout-button,
+.color-pink .woocommerce form .shop_table.cart .actions > .checkout-button{background-color:#dd4c79;}
+#place_order{background-color: #dd4c79;}
+.color-pink .login .form-row .button{background:#dd4c79;}
+.color-pink .save-address-button{background:#dd4c79;}
+.color-pink .wpcf7 .wpcf7-form [type="submit"]{background:#dd4c79;}
+.color-pink .wpcf7 .wpcf7-form div.wpcf7-mail-sent-ok{background-color:#dd4c79;}
+.color-pink .post-password-form input[type=submit]{background:#dd4c79;}
+.color-pink .landing-form form {border-color: #dd4c79;}
+
+/* headers */
+.color-pink .btn-navbar.active {border-bottom-color: #c3325f;}
+.color-pink header .title a:hover {color: #c3325f;}
+.color-pink .mobile-nav li.active {border-bottom-color: #c3325f;}
+.color-pink .shopping-bag li a:hover {color: #c3325f;}
+
+.color-pink .cart-number-box.active {background-color: #c3325f;}
+.color-pink .h1 .cart-number-box.active:after {border-right: 3px solid #c3325f;}
+
+@media screen and (min-width: 646px) {
+    .color-pink .h1 .cart-number-box.active:after {
+		border-right: 3px solid transparent;
+        border-top: 3px solid #c3325f;
+    }
+}
+
+.color-pink .h2 .cart-number-box.active {background: #c3325f;}
+.color-pink .h2 .cart-number-box.active:after {border-right: 3px solid #c3325f;}
+
+.color-pink .menu-container li.menu-item.current-menu-item > a, 
+.color-pink .menu-container li.page_item.current_page_item > a {color: #c3325f;}
+
+.color-pink header li.page_item.current_page_item > .submenu-trigger,
+.color-pink header li.menu-item.current-menu-item > .submenu-trigger, 
+.color-pink header li.menu-item.current-menu-item > .submenu-trigger-container .submenu-trigger { color: #c3325f; }
+
+@media screen and (max-width: 980px) {
+    .color-pink header li.page_item.current_page_item:hover > .submenu-trigger,
+	.color-pink header li.menu-item.current-menu-item:hover > .submenu-trigger,
+	.color-pink header li.menu-item.current-menu-item:hover > .submenu-trigger-container .submenu-trigger { color: #c3325f;}
+}
+
+@media screen and (min-width: 981px) {
+    .color-pink header li.menu-item.current-menu-ancestor > .submenu-trigger,
+	.color-pink header li.page_item.current_page_ancestor > .submenu-trigger { color: #c3325f; }
+    .color-pink header li.menu-item.current-menu-ancestor > .submenu-trigger,
+	.color-pink header li.page_item.current_page_ancestor > .submenu-trigger { color: #c3325f; }
+    .no-touch header li.menu-item.mi-depth-0 > .submenu-trigger:hover, 
+	.no-touch header li.page_item.pi_depth_0 > .submenu-trigger:hover { border-bottom-color: #c3325f; }
+    .no-touch header li.menu-item.mi-depth-0.menu-item-has-children:hover > .submenu-trigger,
+	.no-touch header li.page_item.pi_depth_0.page_item_has_children:hover > .submenu-trigger { border-bottom-color: #c3325f; }
+    .touch header li.menu-item.mi-depth-0.submenu-expanded > .submenu-trigger, 
+	.touch header li.page_item.pi_depth_0.submenu-expanded > .submenu-trigger { border-bottom-color: #c3325f; }
+    .no-touch header .top-navi li.menu-item.mi-depth-0.menu-item-has-children > .submenu-trigger:hover, 
+	.no-touch header .top-navi li.page_item.pi_depth_0.page_item_has_children > .submenu-trigger:hover { border-bottom-color: #c3325f; }
+    .color-pink header .top-navi li.menu-item.mi-depth-0.current-menu-ancestor > .submenu-trigger, 
+	.color-pink header .top-navi li.page_item.pi_depth_0.current_page_ancestor > .submenu-trigger, 
+	.color-pink header .top-navi li.menu-item.mi-depth-0.current-menu-item > .submenu-trigger, 
+	.color-pink header .top-navi li.page_item.pi_depth_0.current_page_item > .submenu-trigger { color: #c3325f; }
+    .color-pink .dropdownmenu-default li.menu-item.current-menu-ancestor:hover > .submenu-trigger, 
+	.color-pink .dropdownmenu-default li.page_item.current_page_ancestor:hover > .submenu-trigger, 
+	.color-pink .dropdownmenu-default li.menu-item.current-menu-item:hover > .submenu-trigger, 
+	.color-pink .dropdownmenu-default li.page_item.current_page_item:hover > .submenu-trigger { color: #c3325f; }
+    .color-pink .dropdownmenu-mega a.current-url { color: #c3325f !important; }
+    .color-pink .dropdownmenu-mega li.menu-item.current-menu-item > a.submenu-trigger, 
+	.color-pink .dropdownmenu-mega li.menu-item.current-menu-ancestor > a.submenu-trigger, 
+	.color-pink .dropdownmenu-mega li.menu-item.current-menu-item > .submenu-trigger-container > a.submenu-trigger, 
+	.color-pink .dropdownmenu-mega li.menu-item.current-menu-ancestor > .submenu-trigger-container > a.submenu-trigger { color: #c3325f !important; }
+    
+	.color-pink .h1 nav.mainmenu li.menu-item.mi-depth-0 > .submenu-trigger:hover, 
+	.color-pink .h1 nav.mainmenu li.menu-item.mi-depth-0.menu-item-has-children:hover > .submenu-trigger, 
+	.color-pink .h1 nav.mainmenu li.page_item.pi_depth_0 > .submenu-trigger:hover, 
+	.color-pink .h1 nav.mainmenu li.page_item.pi_depth_0.page_item_has_children:hover > .submenu-trigger { color: #c3325f; }
+    .color-pink .h1 nav.mainmenu li.menu-item.mi-depth-0.current-menu-ancestor > .submenu-trigger, 
+	.color-pink .h1 nav.mainmenu li.page_item.pi_depth_0.current_page_ancestor > .submenu-trigger, 
+	.color-pink .h1 nav.mainmenu li.menu-item.mi-depth-0.current-menu-item > .submenu-trigger, 
+	.color-pink .h1 nav.mainmenu li.page_item.pi_depth_0.current_page_item > .submenu-trigger { color: #c3325f; }
+    
+	.color-pink .h2 nav.mainmenu li.menu-item.mi-depth-0 > .submenu-trigger:hover, 
+	.color-pink .h2 nav.mainmenu li.menu-item.mi-depth-0.menu-item-has-children:hover > .submenu-trigger, 
+	.color-pink .h2 nav.mainmenu li.page_item.pi_depth_0 > .submenu-trigger:hover, 
+	.color-pink .h2 nav.mainmenu li.page_item.pi_depth_0.page_item_has_children:hover > .submenu-trigger { color: #c3325f; }
+    .color-pink .h2 nav.mainmenu li.menu-item.mi-depth-0.current-menu-ancestor > .submenu-trigger, 
+	.color-pink .h2 nav.mainmenu li.page_item.pi_depth_0.current_page_ancestor > .submenu-trigger, 
+	.color-pink .h2 nav.mainmenu li.menu-item.mi-depth-0.current-menu-item > .submenu-trigger, 
+	.color-pink .h2 nav.mainmenu li.page_item.pi_depth_0.current_page_item > .submenu-trigger { color: #c3325f; }
+	
+    .color-pink .h1 nav.mainmenu li.mi-depth-0.mi-with-dropdown-arrow:hover > .submenu-trigger span.mi-title {
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10px" height="7px"><g><g><polygon fill="%23c3325f" points="8.433,-0.06 4.985,3.325 1.539,-0.06 -0.066,1.546 4.985,6.566 10.037,1.546"/></g></g></svg>');}
+    .color-pink .h2 nav.mainmenu li.mi-depth-0.mi-with-dropdown-arrow:hover > .submenu-trigger span.mi-title {
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10px" height="7px"><g><g><polygon fill="%23c3325f" points="8.433,-0.06 4.985,3.325 1.539,-0.06 -0.066,1.546 4.985,6.566 10.037,1.546"/></g></g></svg>');}
+}
+
+/*other*/
+.color-pink footer a {color: #ccc;}
+.color-pink footer a:hover {color: #fff;}
+
+.color-pink .wp-pagenavi .page,
+.color-pink .wp-pagenavi a {color: #333;}
+.color-pink .wp-pagenavi .page:hover,
+.color-pink .wp-pagenavi a:hover {color:#333;}
+
+.color-pink .button-more a {color: #444;}
+.color-pink .button-more a:hover {color: #fff;background-color: #c3325f; border-color: #c3325f;}
+.color-pink a.play,
+.color-pink a.play:hover {color: #333;}
+.color-pink a.play.white {color: #fff;}
+
+.color-pink .postlist article h2 a:hover {color: #aa1946;}
+

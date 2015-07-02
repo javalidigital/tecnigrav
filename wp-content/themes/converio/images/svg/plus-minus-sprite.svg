@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="40" height="608" version="1.1"
+xmlns="http://www.w3.org/2000/svg">
+	<path d="M16 0 L24 0 L24 16 L40 16 L40 24 L24 24 L24 40 L16 40 L16 24 L0 24 L0 16 L16 16 Z" fill="#7c7c7c"/>
+	<path d="M16 200 L24 200 L24 216 L40 216 L40 224 L24 224 L24 240 L16 240 L16 224 L0 224 L0 216 L16 216 Z" fill="#fff"/>
+	<rect y="400" width="40" height="8" fill="#7c7c7c"/>
+	<rect y="600" width="40" height="8" fill="#fff"/>
+</svg>

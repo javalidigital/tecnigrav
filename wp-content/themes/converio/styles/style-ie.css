@@ -1,0 +1,266 @@
+/* partial transparency the ie way */
+ .social ul li a, ul.social li a {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+    filter: alpha(opacity=30);
+}
+.social ul li a:hover, ul.social li a:hover {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    filter: alpha(opacity=100);
+}
+.slider > * {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    filter: alpha(opacity=0);
+}
+.slider3 .next-prev a {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    filter: alpha(opacity=50);
+}
+.slider3 .next-prev a:hover {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    filter: alpha(opacity=100);
+}
+.msg a.hide {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
+    filter: alpha(opacity=20);
+}
+.overlay {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    filter: alpha(opacity=50);
+}
+/* partially transparent backgrounds */
+ .slider2 article div {
+    background: url('../images/ie/white80.png');
+}
+.slider5 h3 {
+    background: url('../images/ie/black60.png');
+}
+.slider8 article>div>div {
+    background: url('../images/ie/black75.png');
+}
+/* transparency fix */
+ .slider3 .slider-pager, .slider3>div, .slider4 article>div, .slider6>div, .slider9 article>div {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);
+}
+header .searchform button, aside .searchform button {
+    background-image: url(../images/search.png);
+    zoom: 1;
+}
+/* header */
+ header {
+    border-bottom: 1px solid #ccc;
+}
+header .title img {
+    /* fix the error that .png logo disappear with max-width: 100%; */
+    max-width: none;
+}
+.btn-navbar {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+    filter: alpha(opacity=30);
+}
+.btn-navbar.active {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    filter: alpha(opacity=100);
+}
+.btn-navbar:hover {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    filter: alpha(opacity=100);
+}
+.top .btn-navbar {
+    background-image: url(../images/nav_s.png);
+}
+.mobile-nav .search-icon, .mobile-nav .cart-icon {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+    filter: alpha(opacity=30);
+}
+.mobile-nav li:hover .search-icon, .mobile-nav a.active .search-icon, .mobile-nav li:hover .cart-icon, .mobile-nav a.active .cart-icon {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    filter: alpha(opacity=100);
+}
+.cart-number-box {
+    background-color: #484848;
+}
+.cart-number-box.active {
+    background-color: #70c046;
+}
+
+.h1 .main-header .btn-navbar {
+    background-image: url(../images/nav.png);
+}
+.h1 .mobile-nav .search-icon {
+    background-image: url(../images/menu-search.png);
+}
+.h1 .mobile-nav .cart-icon {
+    background-image: url(../images/menu-cart.png);
+}
+.h1 .cart-number-box:after {
+    border-top: 3px solid transparent;
+    border-right: 3px solid #484848;
+    border-bottom: 3px solid transparent;
+}
+.h1 .cart-number-box.active:after {
+    border-right: 3px solid #70c046;
+}
+.h2 .mainmenu .btn-navbar {
+    background-image: url(../images/nav_s.png);
+    background-position: center 22px;
+    background-size: 18px 15px;
+}
+.h2 .searchform button {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+    filter: alpha(opacity=30);
+}
+.h2 .searchform button:hover, .h2 .searchform.active button {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    filter: alpha(opacity=100);
+}
+.h2 .mobile-nav .search-icon {
+    background-image: url(../images/menu-search_2.png);
+}
+.h2 .mobile-nav .cart-icon {
+    background-image: url(../images/menu-cart_2.png);
+}
+.h2 .cart-number-box:after {
+    border-top: 3px solid transparent;
+    border-right: 3px solid #484848;
+    border-bottom: 3px solid transparent;
+}
+.h2 .cart-number-box.active:after {
+    border-right: 3px solid #70c046;
+}
+
+@media screen and (min-width: 646px) {
+    .h1 .cart-number-box:after {
+        border-top: 3px solid #484848;
+    }
+    .h1 .cart-number-box.active:after {
+        border-top: 3px solid #70c046;
+    }
+}
+
+@media screen and (min-width: 981px) {
+    /* fallback for svg */
+    .menu-container > ul .dropdownmenu-default li.parent > a {
+        background-image: url('../images/plus-ico.png');
+        background-position: 97% 20%;
+        background-repeat: no-repeat;
+    }
+    .menu-container > ul .dropdownmenu-default li.parent:hover > a {
+        background-image: url('../images/plus-ico-hover.png');
+        background-position: 97% 20%;
+        background-repeat: no-repeat;
+    }
+    nav.mainmenu > ul > li.parent > a, .top-navi > ul > li.parent > a {
+        background-image: none;
+    }
+    nav.mainmenu > ul > li.parent:hover > a, .top-navi > ul > li.parent:hover > a {
+        background-image: none;
+    }
+    .dropdownmenu > ul {
+        background: rgb(40, 40, 40);
+    }
+    .dropdownmenu-default li.menu-item.menu-item-has-children > ul, .dropdownmenu-default li.page_item.page_item_has_children > ul {
+        background: rgb(40, 40, 40);
+    }
+    /* fix error "JQuery fade effect doesn't work for inner element", all levels of inner element should be filter: inherit; */
+    nav.mainmenu > ul li > a, .top-navi > ul li > a {
+        filter: inherit;
+    }
+    nav.mainmenu > ul li.parent > ul, .top-navi > ul li.parent > ul {
+        filter: inherit;
+    }
+    nav.mainmenu > ul li.parent > ul > li, .top-navi > ul li.parent > ul > li {
+        filter: inherit;
+    }
+    .search-box {
+        background: rgb(216, 216, 216);
+        -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+        filter: alpha(opacity=50);
+    }
+    .search-box input[type=text] {
+        border: 2px solid #ddd;
+    }
+    .search-box input[type=text]:focus {
+        border-color: #bbb;
+    }
+    
+    .shopping-bag {
+        background: rgb(51, 51, 51);
+        -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=95);
+        filter: alpha(opacity=95);
+    }
+
+    .menu-container > ul > li.menu-item.menu-item-with-dropdown-arrow > a:hover span.mi-title {
+        background-image: url('../images/arrow-green.png');
+    }
+    header .top-navi > ul > li.menu-item-with-dropdown-arrow > a span.mi-title {
+        background-image: url('../images/arrow-white.png');
+    }
+    .h1 nav.mainmenu > ul > li.menu-item-with-dropdown-arrow > a span.mi-title {
+        background-image: url('../images/arrow-black.png');
+    }
+    .h2 nav.mainmenu > ul > li.menu-item-with-dropdown-arrow > a span.mi-title {
+        background-image: url('../images/arrow-white.png');
+    }
+}
+@media screen and (max-width: 980px) {
+    .mi-expand-btn {
+        background: url('../images/plus-ico-nav.png') no-repeat center;
+    }
+    li:hover > a > .mi-expand-btn {
+        /* have to use full background rule */
+        background: url('../images/plus-ico-nav-hover.png') no-repeat center;
+    }
+    .mi-expand-btn.expanded {
+        background: #444 url('../images/minus-ico-nav.png') no-repeat center;
+    }
+    li.parent:hover > a > .mi-expand-btn.expanded {
+        /* have to use full background rule */
+        background: #444 url('../images/minus-ico-nav-hover.png') no-repeat center;
+    }
+}
+
+/* sticky header */
+.boxed header.sticky {
+    border-bottom: none;
+}
+.boxed .h1.sticky .main-header {
+    border-bottom: 1px solid #ccc;
+}
+@media screen and (min-width: 646px) {
+    .h2.sticky .mainmenu-container {
+        border-bottom: 1px solid #ccc;
+    }
+}
+
+/* megamenu */
+@media screen and (min-width: 981px) {
+    .mega-magazine .latest-posts .wp-post-image {
+        width: auto;
+    }
+    .mega-magazine .latest-posts img.avatar {
+        width: auto;
+    }
+    .dropdownmenu-mega .widget_recent_projects_widget ul.latest-works li {
+        width: 78px;
+        height: 78px;
+    }
+    .dropdownmenu-mega .widget_newsletter form input + p + p {
+        padding-left: 10px;
+    }
+}

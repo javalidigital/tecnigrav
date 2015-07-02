@@ -1,0 +1,51 @@
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: " ";
+}
+.clearfix:after {
+  clear: both;
+}
+.converio-menu-item-option-box {
+  clear: both;
+  padding: 10px 10px 16px;
+  margin-top: 16px;
+  margin-right: 10px;
+  border: 1px solid #5cb85c;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+}
+.converio-menu-item-option-box > legend {
+  color: #5cb85c;
+  font-weight: 600;
+  font-style: italic;
+}
+.converio-menu-item-option-box .description-thin {} .converio-menu-item-option-box .description-wide {
+  width: 350px;
+}
+.converio-menu-item-megamenu-collapse-option-box {
+  display: none;
+  padding-left: 10px;
+}
+/*converio menu options visibility*/
+
+.converio-menu-item-megamenu-option-box {
+  display: none;
+}
+.menu-item-depth-0 .converio-menu-item-megamenu-option-box {
+  display: block;
+}
+.field-converio-columns-headline-disabled {
+  display: none;
+}
+.field-converio-widget-area {
+  display: none;
+}
+.field-converio-show-author-info {
+  display: none;
+}
+.from-this-category {
+  display: none;
+}
+.menu-item-category .from-this-category {
+  display: inline;
+}

@@ -1,0 +1,2700 @@
+
+/* $Common styles ================================================= */
+header {
+    position: relative;
+    /*position: fixed;*/
+    /* must set z-index to larger than 1, otherwise the submenu will under the content and will disappear when try to hover on it */
+    z-index: 50;
+    /* negative margin to neutralize the padding of .root */
+    margin: 0 -10px;
+    background: #fff;
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .14);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .14);
+}
+header > section {
+    padding: 0 10px;
+}
+header.sticky > section {
+    /* make the sections take the full width in sticky header */
+    max-width: none;
+}
+.boxed header.sticky {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.boxed header.sticky > section {
+    max-width: 1110px;
+    margin: 0 auto;
+}
+@media screen and (min-width: 401px) {
+    header {
+        /* the padding of .root become to 20px */
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    header > section {
+        padding: 0 20px;
+    }
+}
+@media screen and (min-width: 801px) {
+    header.sticky {
+        position: fixed;
+        top: auto;
+        left: 0;
+        width: 100%;
+        background: transparent;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0;
+    }
+    /* override */
+    header.sticky-enabled.sticky {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+@media screen and (min-width: 981px) {
+    .boxed header {
+        /* the padding of .boxed .root become to 30px */
+        margin-left: -30px;
+        margin-right: -30px;
+    }
+    .boxed header > section {
+        padding: 0 30px;
+    }
+}
+@media screen and (min-width: 1171px) {
+    header {
+        /* the padding of .root become to 0px */
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .boxed header {
+        /* the padding of .boxed .root become to 0px */
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .boxed header > section {
+        padding: 0 40px;
+    }
+    header.header-opacity-enabled {
+        background: transparent;
+    }
+}
+
+
+/* Navigation button, used for main menu/social menu/top menu,displayed in mobile device */
+.btn-navbar {
+    overflow: hidden;
+    width: 60px;
+    cursor: pointer;
+    -webkit-transition: opacity .15s ease-out 0s, border-bottom .15s ease-out 0s;
+    -moz-transition: opacity .15s ease-out 0s, border-bottom .15s ease-out 0s;
+    -o-transition: opacity .15s ease-out 0s, border-bottom .15s ease-out 0s;
+    transition: opacity .15s ease-out 0s, border-bottom .15s ease-out 0s;
+    text-indent: -99999px;
+    opacity: .3;
+    color: #fff;
+    border-bottom: 4px solid transparent;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.no-touch .btn-navbar:hover {
+    opacity: 1;
+}
+.btn-navbar.active {
+    opacity: 1;
+    border-bottom: 4px solid #61b23b;
+}
+
+/*common styles for menu*/
+/* fix an error that there is a unwanted space on the right side of menu when screen size < 980px on Chrome of Mac OS */
+.menu-container {
+    position: relative;
+    clear: both;
+}
+
+.menu-container ul {
+    display: none;
+}
+
+/* have to add > ul to .mainmenu because in .h2 there is other <ul> for search box and shopping bag */
+.menu-container > ul {
+    /* for pseudo divider position */
+    position: relative;
+    background: #333;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding: 20px 10px;
+    clear: both;
+    list-style: none;
+}
+
+header li.menu-item, header li.page_item {
+    position: relative;
+    list-style-type: none;
+}
+header .submenu-trigger {
+    display: block;
+    position: relative;
+    line-height: 18px;
+    text-decoration: none;
+}
+header a.submenu-trigger {
+    color: #bbb;
+}
+header span.submenu-trigger {
+    color: #aaa;
+}
+header li.page_item.current_page_item > .submenu-trigger, header li.menu-item.current-menu-item > .submenu-trigger, header li.menu-item.current-menu-item > .submenu-trigger-container .submenu-trigger {
+    color: #61b23b;
+    opacity: 1;
+}
+
+header span.mi-title-wrapper, header span.mi-title, header span.mi-desc {
+    display: block;
+}
+header span.mi-desc {
+    font-size: 11px;
+    color: #999;
+}
+header li.mi-with-icon > .submenu-trigger span.mi-title, header li.mi-with-icon > .submenu-trigger-container .submenu-trigger span.mi-title {
+    position: relative;
+    padding-left: 22px;
+}
+header li.mi-with-icon > .submenu-trigger span.mi-desc, header li.mi-with-icon > .submenu-trigger-container .submenu-trigger span.mi-desc {
+    padding-left: 22px;
+}
+header li.mi-with-icon > .submenu-trigger i.fa, header li.mi-with-icon > .submenu-trigger-container .submenu-trigger i.fa {
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 0px;
+}
+header li.mi-with-description > .submenu-trigger span.mi-title, header li.mi-with-description > .submenu-trigger-container .submenu-trigger span.mi-title {
+    /* pixel perfect for the space between menu item title and description */
+    margin-bottom: 1px;
+}
+
+header li.pi_depth_0:first-child > .submenu-trigger, header li.mi-depth-0:first-child > .submenu-trigger, header li.mi-depth-0:first-child > .submenu-trigger-container .submenu-trigger {
+    border-top: 1px solid #444;
+}
+@media screen and (max-width: 980px) {
+    header .submenu-trigger {
+        padding: 13px 12px;
+        border-bottom: 1px solid #444;
+    }
+    header li.page_item:hover > .submenu-trigger, header li.menu-item:hover > .submenu-trigger, header li.menu-item:hover > .submenu-trigger-container .submenu-trigger {
+        background-color: #3a3a3a;
+    }
+    /* the same CSS rules as the above one. for widget title, restrict the :hover to widget instead of .menu-item for not highlight the multi-widgets */
+    header li.menu-item .widget:hover > h3 .submenu-trigger {
+        background-color: #3a3a3a;
+    }
+    header li.page_item.current_page_item > .submenu-trigger, header li.menu-item.current-menu-item > .submenu-trigger, header li.menu-item.current-menu-item > .submenu-trigger-container .submenu-trigger {
+        background: #2c2c2c;
+    }
+    /* it's very hard to supress the :hover effect on megamenu. restrict the styles of menu item :hover effect under 980px to simplify the styles of megamenu. should add familiar styles for dropdown menu. */
+    header li.page_item:hover > a.submenu-trigger, header li.menu-item:hover > a.submenu-trigger, header li.menu-item:hover > .submenu-trigger-container a.submenu-trigger {
+        color: #fff;
+    }
+    header li.page_item.current_page_item:hover > .submenu-trigger, header li.menu-item.current-menu-item:hover > .submenu-trigger, header li.menu-item.current-menu-item:hover > .submenu-trigger-container .submenu-trigger {
+        color: #61b23b;
+    }
+
+    header li.menu-item:hover > .submenu-trigger .mi-desc, header li.menu-item:hover > .submenu-trigger-container .submenu-trigger .mi-desc {
+        color: #bbb;
+    }
+    /* when screen size < 980px, menu items only has icon will occupy the position with that icon; when screen size > 980px, this stategy not be affacted by with or without description */
+    header li.mi-with-icon.mi-without-title.mi-without-description > a i.fa {
+        position: relative;
+        left: -22px;
+    }
+
+    .mi-expand-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        width: 44px;
+        height: 100%;
+        cursor: pointer;
+        background: url("../images/svg/plus-sprite.svg") no-repeat 17px center;
+        -o-background-size: 60px;
+        background-size: 60px;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        /* for position: relative; of <a>, set z-index to 1 to over the <a> */
+        z-index: 1;
+    }
+    .mi-expand-btn:hover {
+        background-color: #444;
+    }
+    header li.page_item:hover > .submenu-trigger > .mi-expand-btn, header li.menu-item:hover > .submenu-trigger > .mi-expand-btn,  header li.menu-item:hover > .submenu-trigger-container > .submenu-trigger > .mi-expand-btn {
+        background-position: -33px center;
+    }
+    .mi-expand-btn.expanded {
+        background-image: url("../images/svg/minus-sprite.svg");
+        background-repeat: no-repeat;
+        background-position: 17px center;
+        -o-background-size: 60px;
+        background-size: 60px;
+        background-color: #444;
+    }
+    header li.page_item:hover > .submenu-trigger > .mi-expand-btn.expanded, header li.menu-item:hover > .submenu-trigger > .mi-expand-btn.expanded, header li.menu-item:hover > h3 > .submenu-trigger > .mi-expand-btn.expanded {
+        background-position: -33px center;
+    }
+    header li.page_item:nth-last-of-type(1) > .submenu-trigger, header li.last-visible-menu-item > .submenu-trigger, header li.last-visible-menu-item > h3 > .submenu-trigger {
+        border-bottom: none;
+    }
+    /* the same CSS rules as the above one, list it alone because it's more complex for menu item with widget */
+    /* do not display the bottom line only if it's the last widget in the menu item */
+    header li.last-visible-menu-item > .widget-area > .last-widget > h3 > .submenu-trigger {
+        border-bottom: none;
+    }
+    /* if the last menu item is also expanded, then display its bottom border */
+    header li.page_item.expanded > ul > li.expanded:nth-last-of-type(1) > .submenu-trigger, header li.expanded.last-visible-menu-item > .submenu-trigger, header li.expanded.last-visible-menu-item > h3 > .submenu-trigger {
+        border-bottom: 1px solid #444;
+    }
+
+    /* the same CSS rules as the above one, for multi widgets in the same menu item */
+    header li.last-visible-menu-item > .widget-area > .last-widget.expanded > h3 > .submenu-trigger {
+        border-bottom: 1px solid #444;
+    }
+
+    header li.page_item.expanded ~ li.next-to-expanded-menu-item > .submenu-trigger, header li.menu-item.expanded ~ li.next-to-expanded-menu-item > .submenu-trigger, header li.menu-item.expanded ~ li.next-to-expanded-menu-item > h3 > .submenu-trigger {
+        border-top: 1px solid #444;
+    }
+
+    /* the same CSS rules as the above one, for menu items merged to lower level submenu, remove the top border from the first menu item of submenu */
+    header li.menu-item.expanded ~ li.next-to-expanded-menu-item.mi-headline-merged > ul.sub-menu > li.menu-item:first-child > .submenu-trigger, header li.menu-item.expanded ~ li.next-to-expanded-menu-item.mi-headline-merged > ul.sub-menu > li.menu-item:first-child > h3 > .submenu-trigger {
+        border-top: 1px solid #444;
+    }
+
+    /* the same CSS rules as the above two, display the top line only if it's the first widget in the menu item */
+    header li.menu-item.expanded ~ li.next-to-expanded-menu-item > .widget-area > .widget:first-child > h3 > .submenu-trigger {
+        border-top: 1px solid #444;
+    }
+
+    /* also need to display the top line if the widget is under an expanded widget in the same menu item */
+    header .widget.expanded + .widget > h3 > .submenu-trigger {
+        border-top: 1px solid #444;
+    }
+
+    /* for very last submenu trigger and very last widget, always display its bottom border */
+    header .submenu-trigger-very-last {
+        border-bottom: 1px solid #444!important;
+    }
+    header .widget-very-last.expanded {
+        border-bottom: 1px solid #444!important;
+    }
+
+    header li.menu-item.menu-item-has-children > ul, header li.page_item.page_item_has_children > ul {
+        margin-left: 18px;
+    }
+    /* fix an error that menu, search box and shopping bag got a unwanted right space in slide animation on Chrome */
+    .menu-container > ul {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 401px) {
+    .menu-container > ul {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media screen and (min-width: 981px) {
+    .btn-navbar {
+        display: none;
+    }
+    .menu-container {
+        /* reset position to static to let megamenu take the full width */
+        position: static;
+    }
+    .menu-container > ul {
+        position: static;
+        /* no matter what styles on it, level 1 menu items should always display on large screen */
+        /* override the inline display: none; created by Javascript */
+        display: block!important;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+    }
+    header li.menu-item > .submenu-trigger, header li.page_item > .submenu-trigger {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+    
+    header li.menu-item.current-menu-ancestor > .submenu-trigger, header li.page_item.current_page_ancestor > .submenu-trigger {
+        color: #61b23b;
+    }
+
+    /* dropdown menu */
+    .dropdownmenu > ul {
+        position: absolute;
+        /* fix an weird error that font blink on Firefox when hover on one of the menu items. Must set background to rgba */
+        background: rgba(40, 40, 40, 0.95);
+    }
+
+    /* level 1 submenu */
+    header li.menu-item.mi-depth-0:first-child, header li.page_item.pi_depth_0:first-child {
+        padding-top: 0;
+    }
+    header li.menu-item.mi-depth-0:last-child, header li.page_item.pi_depth_0:last-child {
+        padding-bottom: 0;
+    }
+    header li.menu-item.mi-depth-0 > .submenu-trigger, header li.page_item.pi_depth_0 > .submenu-trigger {
+        padding: 0;
+        border-bottom: 4px solid transparent;
+        opacity: 1;
+        -webkit-transition: border-bottom .15s ease-out 0s;
+        -moz-transition: border-bottom .15s ease-out 0s;
+        -o-transition: border-bottom .15s ease-out 0s;
+        transition: border-bottom .15s ease-out 0s;
+    }
+    header li.menu-item.mi-depth-0:hover > .submenu-trigger, header li.page_item.pi_depth_0:hover > .submenu-trigger {
+        /* override the grey background */
+        background: none;
+    }
+    header li.menu-item.mi-depth-0.current-menu-ancestor > .submenu-trigger, header li.page_item.pi_depth_0.current_page_ancestor > .submenu-trigger, header li.menu-item.mi-depth-0.current-menu-item > .submenu-trigger, header li.page_item.pi_depth_0.current_page_item > .submenu-trigger {
+        /* override the black background of current menu item */
+        background: none;
+    }
+    /* if menu item has submenu, use <li> as the hover sensitive area. Otherwise, use <a> */
+    .no-touch header li.menu-item.mi-depth-0 > .submenu-trigger:hover, .no-touch header li.page_item.pi_depth_0 > .submenu-trigger:hover {
+        border-bottom-color: #61b23b;
+    }
+    .no-touch header li.menu-item.mi-depth-0.menu-item-has-children:hover > .submenu-trigger, .no-touch header li.page_item.pi_depth_0.page_item_has_children:hover > .submenu-trigger {
+        border-bottom-color: #61b23b;
+    }
+    .touch header li.menu-item.mi-depth-0.submenu-expanded > .submenu-trigger, .touch header li.page_item.pi_depth_0.submenu-expanded > .submenu-trigger {
+        border-bottom-color: #61b23b;
+    }
+    header li.menu-item.mi-depth-0.menu-item-has-children > ul, header li.page_item.pi_depth_0.page_item_has_children > ul {
+        top: 100%;
+        border-left: none;
+    }
+    header li.menu-item.mi-depth-0.menu-item-has-children.reverse > ul, header li.page_item.pi_depth_0.page_item_has_children.reverse > ul {
+        border-right: none;
+    }
+    /* icon/description/dropdown arrow */
+    header li.mi-depth-0.mi-with-icon > .submenu-trigger span.mi-desc {
+        padding-left: 0px;
+    }
+    header li.mi-depth-0.mi-with-icon.mi-without-title > .submenu-trigger i.fa {
+        position: relative;
+        display: inline;
+        top: auto;
+        left: auto;
+    }
+
+    /* trick to restrict the width of parent base on one of its children */
+    header li.menu-item.mi-depth-0.mi-with-description > .submenu-trigger {
+        display: table;
+    }
+    header li.menu-item.mi-depth-0.mi-with-description > .submenu-trigger span.mi-title-wrapper {
+        display: table-row; 
+        width: 1px;
+    }
+    header li.menu-item.mi-depth-0.mi-with-description > .submenu-trigger span.mi-title {
+        display: inline-block;
+    }
+    header li.menu-item.mi-depth-0.mi-with-description > .submenu-trigger span.mi-desc {
+        display: table-cell; 
+        width: 1px;
+    }
+    header li.menu-item.mi-depth-0.mi-with-dropdown-arrow > .submenu-trigger span.mi-title {
+        padding-right: 20px;
+        background-repeat: no-repeat;
+        background-position: right center;
+    }
+    .nav-collapse {
+        display: block;
+    }
+    header li.menu-item.mi-depth-0 > .submenu-trigger, header li.page_item.pi_depth_0 > .submenu-trigger {
+        font-size: 14px;
+    }
+    header li.menu-item.mi-depth-0:first-child > .submenu-trigger, header li.page_item.pi_depth_0:first-child > .submenu-trigger {
+        border-top: none;
+    }
+
+    /* default dropdown menu */
+    .dropdownmenu-default .submenu-trigger {
+        padding: 13px 12px;
+        border-bottom: 1px solid #444;
+    }
+    .dropdownmenu-default li.page_item:hover > .submenu-trigger, .dropdownmenu-default li.menu-item:hover > .submenu-trigger {
+        background-color: #3a3a3a;
+    }
+    .dropdownmenu-default li.page_item.current_page_item > .submenu-trigger, .dropdownmenu-default li.menu-item.current-menu-item > .submenu-trigger {
+        background: #2c2c2c;
+    }
+}
+/* $Dropdown menu ================================================= */
+@media screen and (min-width: 981px) {
+    .dropdownmenu-default li.menu-item, .dropdownmenu-default li.page_item {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .dropdownmenu-default li.menu-item:hover > .submenu-trigger, .dropdownmenu-default li.page_item:hover > .submenu-trigger {
+        color: #fff;
+    }
+
+    .dropdownmenu-default li.menu-item:first-child, .dropdownmenu-default li.page_item:first-child {
+        padding-top: 4px;
+    }
+    .dropdownmenu-default li.menu-item:last-child, .dropdownmenu-default li.page_item:last-child {
+        padding-bottom: 4px;
+    }
+
+    .dropdownmenu-default li.menu-item > .submenu-trigger, .dropdownmenu-default li.page_item > .submenu-trigger {
+        padding: 8px 15px 8px 10px;
+    }
+    .dropdownmenu-default li.menu-item:hover > .submenu-trigger > .mi-desc {
+        color: #bbb;
+    }
+
+    .dropdownmenu-default li.menu-item.menu-item-has-children > .submenu-trigger, .dropdownmenu-default li.page_item.page_item_has_children > .submenu-trigger {
+        /* do not use background shortcut, as it will override the background color */
+        background-image: url("../images/svg/plus-sprite-vertical.svg");
+        background-repeat: no-repeat;
+        background-position: 97% 6px;
+        -o-background-size: 8px;
+        background-size: 8px;
+    }
+    .dropdownmenu-default li.menu-item.menu-item-has-children:hover > .submenu-trigger, .dropdownmenu-default li.page_item.page_item_has_children:hover > .submenu-trigger {
+        background-position: 97% -82px;
+    }
+    .dropdownmenu-default li.menu-item:first-child > .submenu-trigger, .dropdownmenu-default li.page_item:first-child > .submenu-trigger {
+        border-top: 1px solid #444;
+    }
+    .dropdownmenu-default li.menu-item.current-menu-ancestor > .submenu-trigger, .dropdownmenu-default li.page_item.current_page_ancestor > .submenu-trigger {
+        background-color: #2c2c2c;
+    }
+    /* font color of current item should stay the same, override :hover effect */
+    .dropdownmenu-default li.menu-item.current-menu-ancestor:hover > .submenu-trigger, .dropdownmenu-default li.page_item.current_page_ancestor:hover > .submenu-trigger, .dropdownmenu-default li.menu-item.current-menu-item:hover > .submenu-trigger, .dropdownmenu-default li.page_item.current_page_item:hover > .submenu-trigger {
+        color: #61b23b;
+    }
+
+    .dropdownmenu-default li.menu-item.current-menu-ancestor:hover > .submenu-trigger > .mi-desc, .dropdownmenu-default li.page_item.current_page_ancestor:hover > .submenu-trigger > .mi-desc, .dropdownmenu-default li.menu-item.current-menu-item:hover > .submenu-trigger > .mi-desc, .dropdownmenu-default li.page_item.current_page_item:hover > .submenu-trigger > .mi-desc {
+        color: #999;
+    }
+
+    /* submenu */
+    .dropdownmenu-default.menu-item-has-children > ul, .dropdownmenu-default li.menu-item.menu-item-has-children > ul, .dropdownmenu-default.page_item_has_children > ul, .dropdownmenu-default li.page_item.page_item_has_children > ul {
+        display: none;
+        width: 190px;
+        font-size: 13px;
+        margin-left: 0;
+        -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, .5);
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, .5);
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    /* first-level dropdown submenu should not have a left border */
+    .dropdownmenu-default li.menu-item.menu-item-has-children > ul, .dropdownmenu-default li.page_item.page_item_has_children > ul {
+        border-left: 1px solid #444;
+    }
+    .dropdownmenu-default li.menu-item.menu-item-has-children > ul, .dropdownmenu-default li.page_item.page_item_has_children > ul {
+        top: -5px;
+        left: 100%;
+        position: absolute;
+        /* fix an weird error that font blink on Firefox when hover on one of the menu items. Must set background to rgba */
+        background: rgba(40, 40, 40, 0.95);
+    }
+    .dropdownmenu-default.menu-item-has-children.reverse > ul, .dropdownmenu-default li.menu-item.menu-item-has-children.reverse > ul, .dropdownmenu-default.page_item_has_children.reverse > ul, .dropdownmenu-default li.page_item.page_item_has_children.reverse > ul {
+        right: 100%;
+        left: auto;
+        -webkit-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+        box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    }
+    .dropdownmenu-default li.menu-item.menu-item-has-children.reverse > ul, .dropdownmenu-default li.page_item.page_item_has_children.reverse > ul {
+        border-left: none;
+        border-right: 1px solid #444;
+    }
+    .dropdownmenu-default li.menu-item.menu-item-has-children:first-child > ul, .dropdownmenu-default li.page_item.page_item_has_children:first-child > ul {
+        top: 0;
+    }
+}
+/* $Megamenu ================================================= */
+.dropdownmenu-mega {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.dropdownmenu-mega a.current-url {
+    color: #61b23b !important;
+}
+.dropdownmenu-mega a > img {
+    opacity: 1; 
+    transition: all 0.15s linear;
+    /* fix an error that image jump if it has an opacity transition */
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /* fix an error that things in image jump if there is opacity transition on the image */
+    -moz-transform: rotate(0);
+    -webkit-transform: translate3d(0, 0, 0);
+}
+.dropdownmenu-mega a:hover > img {
+    opacity: 0.8;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-transform: rotate(0);
+    -webkit-transform: translate3d(0, 0, 0);
+}
+.dropdownmenu-mega li.menu-item.mi-headline-merged > ul {
+    margin-left: 0;
+}
+
+/* Megamenu with widgets ================================================= */
+.dropdownmenu-mega .widget > h3 {
+    color: #aaa;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+.dropdownmenu-mega .widget a {
+    color: #bbb;
+}
+.dropdownmenu-mega .widget a:hover {
+    color: #fff;
+}
+
+/* product widgets */
+/* the strategy of bottom space for product widgets is: remove any of margin-bottom and padding-bottom of <img> and its silbings; use .product_list_widget to control the bottom space */
+.dropdownmenu-mega ul.product_list_widget {
+    margin-bottom: 20px;
+}
+.dropdownmenu-mega .widget-area > .widget:last-child ul.product_list_widget {
+    margin-bottom: 0;
+}
+/* fix an jump error when expand the submenu */
+.dropdownmenu-mega .product_list_widget:before,
+.dropdownmenu-mega .product_list_widget:after { 
+    content: ""; 
+    display: table; 
+}
+.dropdownmenu-mega .product_list_widget:after { 
+    clear: both; 
+}
+.dropdownmenu-mega .product_list_widget li {
+    position: relative;
+    clear: both;
+}
+
+.dropdownmenu-mega .product_list_widget li:last-child {
+    margin-bottom: 0;
+}
+
+.dropdownmenu-mega .product_list_widget a {
+    display: block;
+}
+
+.dropdownmenu-mega .product_list_widget img {
+    float: left;
+    width: 60px;
+    height: auto;
+    margin-right: 12px;
+    margin-bottom: 22px;
+}
+
+/* for bottom space of megamenu */
+.dropdownmenu-mega .product_list_widget > li:last-child img {
+    margin-bottom: 0;
+}
+
+.dropdownmenu-mega .product_list_widget .amount {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 500;
+    margin-top: 4px;
+}
+.dropdownmenu-mega .product_list_widget del {
+    margin-right: 6px;
+}
+.dropdownmenu-mega .product_list_widget ins {
+    color: #f05140;
+    text-decoration: none;
+}
+.dropdownmenu-mega .product_list_widget .reviewer {
+    display: block;
+    font-size: 11px;
+    padding-bottom: 22px;
+}
+.dropdownmenu-mega .product_list_widget .star-rating ~ .reviewer {
+    padding-bottom: 38px;
+}
+/* for bottom space of megamenu */
+.dropdownmenu-mega .product_list_widget > li:last-child .reviewer {
+    padding-bottom: 0;
+}
+.dropdownmenu-mega .product_list_widget > li:last-child .star-rating ~ .reviewer {
+    padding-bottom: 16px;
+}
+
+.dropdownmenu-mega .widget .star-rating {
+    float: none;
+    position: absolute;
+    width: 90px;
+    height: 13px;
+    bottom: 22px;
+    left: 71px;
+    text-indent: 0;
+    background: url("../images/stars.png") repeat-x 0 -2px;
+    overflow: hidden;
+}
+/* for bottom space of megamenu */
+.dropdownmenu-mega ul.product_list_widget > li:last-child .star-rating {
+    bottom: 0;
+}
+.dropdownmenu-mega .widget .star-rating > span {
+    display: inline-block;
+    text-indent: -999em;
+    background: url("../images/stars.png") repeat-x 0 -18px;
+    height: 13px;
+    /* for stars position mismatch on safari */
+    vertical-align: top;
+}
+.dropdownmenu-mega .widget_top_rated_products li > .amount, .dropdownmenu-mega .widget_top_rated_products li > ins {
+    display: inline-block;
+    padding-bottom: 22px;
+}
+.dropdownmenu-mega .widget_top_rated_products li > .star-rating ~ .amount, .dropdownmenu-mega .widget_top_rated_products li > .star-rating ~ ins {
+    padding-bottom: 38px;
+}
+/* for bottom space of megamenu */
+.dropdownmenu-mega .widget_top_rated_products li:last-child > .amount, .dropdownmenu-mega .widget_top_rated_products li:last-child > ins {
+    padding-bottom: 0;
+}
+.dropdownmenu-mega .widget_top_rated_products li:last-child > .star-rating ~ .amount, .dropdownmenu-mega .widget_top_rated_products li:last-child > .star-rating ~ ins {
+    padding-bottom: 18px;
+}
+
+/* work stream widget */
+.dropdownmenu-mega .widget_recent_projects_widget ul.latest-works {
+    display: block;
+    margin-right: 0;
+    padding-top: 4px;
+}
+.dropdownmenu-mega .widget_recent_projects_widget ul.latest-works li {
+    overflow: hidden;
+    margin: 0 8px 6px 0;
+}
+.dropdownmenu-mega .widget_recent_projects_widget .view-all {
+    color: #999;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+/* recent tweet widget */
+.dropdownmenu-mega .widget_twitter_widget h3 > .submenu-trigger {
+    padding-left: 37px;
+}
+.dropdownmenu-mega .widget_twitter_widget h3 > .submenu-trigger:before {
+    content: '\f099';
+    font-family: 'FontAwesome';
+    font-size: 18px;
+    position: absolute;
+    top: 14px;
+    left: 12px;
+}
+.dropdownmenu-mega .widget_twitter_widget li {
+    margin-bottom: 20px;
+    color: #999;
+}
+.dropdownmenu-mega .widget_twitter_widget li > span {
+    font-size: 11px;
+}
+/* newsletter widget */
+.dropdownmenu-mega .widget_newsletterwidget {
+    color: #999;
+    background: none;
+    border-top: none;
+    box-shadow: none;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+}
+
+.dropdownmenu-mega .widget_newsletterwidget h3 {
+    /* override */
+    color: #aaa;
+    padding-top: 0px;
+    font-weight: 400;
+}
+
+.dropdownmenu-mega .widget_newsletterwidget form {
+    display: table;
+    width: 100%;
+    margin-top: 15px;
+}
+.dropdownmenu-mega .widget_newsletterwidget form p {
+    display: table-cell;
+}
+.dropdownmenu-mega .widget_newsletterwidget form p:last-child {
+    padding-left: 10px;
+}
+.dropdownmenu-mega .widget_newsletterwidget .newsletter-email{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.dropdownmenu-mega .widget_newsletterwidget .newsletter-submit {
+    font-family: 'FontAwesome';
+    font-size: 16px;
+    width: 40px;
+    height: 33px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+/* text widget */
+.dropdownmenu-mega .textwidget {
+    color: #999;
+}
+/* contact form 7, it's actually in a Text widget */
+.dropdownmenu-mega .wpcf7 {
+    margin-top: 14px;
+}
+.dropdownmenu-mega .wpcf7 .wpcf7-form > p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #999;
+    line-height: 16px;
+    overflow: visible;
+}
+.dropdownmenu-mega .wpcf7 .wpcf7-form > p:last-of-type {
+    margin-bottom: 0;
+}
+.dropdownmenu-mega .wpcf7 .wpcf7-form span.wpcf7-form-control-wrap {
+    /* override */
+    float: none;
+    display: block!important;
+    margin-top: 5px;
+}
+.dropdownmenu-mega .wpcf7 input[type="text"], .dropdownmenu-mega .wpcf7 input[type="email"], .dropdownmenu-mega .wpcf7 textarea {
+    float: none;
+    color: #777;
+    background: #2b2b2b;
+    width: 100%;
+    max-width: 100%;
+    border-color: #555;
+    margin-top: 0;
+    padding: 5px 9px 6px;
+    font-size: 14px;
+    font-weight: 400; /* override :visited */
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.dropdownmenu-mega .wpcf7 input[type="text"]:hover, .dropdownmenu-mega .wpcf7 input[type="email"]:hover, .dropdownmenu-mega .wpcf7 textarea:hover {
+    border-color: #777;
+}
+.dropdownmenu-mega .wpcf7 input[type="text"]:focus, .dropdownmenu-mega .wpcf7 input[type="email"]:focus, .dropdownmenu-mega .wpcf7 textarea:focus {
+    border-color: #aaa;
+}
+.dropdownmenu-mega .wpcf7 input.wpcf7-not-valid {
+    border-color: #ed5946!important;
+}
+.dropdownmenu-mega .wpcf7 .wpcf7-not-valid-tip {
+    padding-bottom: 10px;
+}
+/* placeholder style for contact form 7 */
+.dropdownmenu-mega .wpcf7 input[type="text"]::-webkit-input-placeholder, .dropdownmenu-mega .wpcf7 input[type="email"]::-webkit-input-placeholder, .dropdownmenu-mega .wpcf7 textarea::-webkit-input-placeholder {
+    color: #777;
+}
+
+.dropdownmenu-mega .wpcf7 input[type="text"]::-moz-placeholder, .dropdownmenu-mega .wpcf7 input[type="email"]::-moz-placeholder, .dropdownmenu-mega .wpcf7 textarea::-moz-placeholder {
+    color: #777;
+}
+
+.dropdownmenu-mega .wpcf7 input[type="text"]:-ms-input-placeholder, .dropdownmenu-mega .wpcf7 input[type="email"]:-ms-input-placeholder, .dropdownmenu-mega .wpcf7 textarea:-ms-input-placeholder {
+    color: #777;
+}
+
+.dropdownmenu-mega .wpcf7 textarea {
+    height: 94px;
+    /* override */
+    min-height: 94px;
+    resize: none;
+}
+.dropdownmenu-mega .wpcf7 input[type="submit"] { /* override to do not restrict the margin-top in <p> */
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-transform: capitalize;
+    height: 34px;
+    padding: 0 12px;
+}
+
+/* recent blog posts widget */
+.dropdownmenu-mega .widget_recent_blog_posts_widget li {
+    overflow: hidden;
+}
+.dropdownmenu-mega .widget_recent_blog_posts_widget img {
+    float: left;
+    margin-right: 12px;
+    margin-bottom: 24px;
+}
+.dropdownmenu-mega .widget_recent_blog_posts_widget li > a {
+    line-height: 18px;
+}
+.dropdownmenu-mega .widget_recent_blog_posts_widget li > span {
+    font-size: 11px;
+    line-height: 16px;
+}
+
+/* tag widget */
+.dropdownmenu-mega .widget_tag_cloud a {
+    display: inline-block;
+    margin-bottom: 6px;
+    border: 1px solid #555;
+    background: #3d3d3d;
+    color: #ccc;
+    font-size: 11px !important;
+    padding: 2px 8px;
+    border-radius: 2px;
+}
+.dropdownmenu-mega .widget_tag_cloud a:hover {
+    color: #333;
+    background: #70C14A;
+    border: 1px solid #70C14A;
+    text-decoration: none;
+}
+
+/* search widget */
+.dropdownmenu-mega .widget_search fieldset {
+    background: #2B2B2B;
+    border-color: #555;
+    text-align: left;
+}
+.dropdownmenu-mega .widget_search fieldset:hover {
+    border-color: #777;
+}
+.dropdownmenu-mega .widget_search form.active fieldset {
+    border-color: #aaa;
+}
+.dropdownmenu-mega .widget_search input {
+    width: 85%;
+    padding: 5px 7px;
+    background: #2b2b2b;
+    font-size: 14px;
+    color: #777;
+}
+.dropdownmenu-mega .widget_search button {
+    color: #555;
+    background: url("../images/search_2.png") center center no-repeat;
+    float: right;
+    white-space: nowrap;
+    margin-top: 2px;
+    text-indent: -9999px;
+}
+.dropdownmenu-mega .widget_search button:hover {
+    opacity: 1;
+}
+
+/* calendar widget */
+.dropdownmenu-mega .widget_calendar table#wp-calendar {
+    margin-bottom: 0;
+}
+.dropdownmenu-mega .widget_calendar table#wp-calendar thead tr {
+    background-color: #3B3B3B;
+    border-top: 1px solid #484848;
+}
+.dropdownmenu-mega .widget_calendar table#wp-calendar thead th {
+    border-top: none;
+}
+.dropdownmenu-mega .widget_calendar table#wp-calendar #prev a {
+    background: url(../images/btn_slider_number_light.svg) no-repeat 0 0;
+}
+.dropdownmenu-mega .widget_calendar table#wp-calendar #next a {
+    background: url(../images/btn_slider_number_light.svg) no-repeat -24px 0;
+}
+.dropdownmenu-mega .widget_calendar table#wp-calendar td a {
+    color: #ccc;
+}
+
+/* map widget */
+.dropdownmenu-mega .widget_map_widget .gmap {
+    height: 340px;
+    /* .gmap is the content div of "map" widget, it can't has paddings like the content div of othere widgets */
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* custom menu widget */
+.dropdownmenu-mega .widget_nav_menu ul {
+    display: block;
+}
+.dropdownmenu-mega .widget_nav_menu li.menu-item > ul {
+    margin-left: 0;
+    padding-left: 15px;
+}
+.dropdownmenu-mega .widget_nav_menu li.menu-item > a {
+    line-height: 24px;
+}
+
+/* custom categories widget */
+.dropdownmenu-mega .widget_categories ul {
+    display: block;
+    padding-left: 15px;
+}
+.dropdownmenu-mega .widget_categories > ul {
+    padding-left: 0;
+}
+.dropdownmenu-mega .widget_categories li {
+    list-style-type: none;
+}
+.dropdownmenu-mega .widget_categories li > a {
+    line-height: 24px;
+}
+
+/* custom pages widget */
+.dropdownmenu-mega .widget_pages ul {
+    padding-left: 15px;
+}
+.dropdownmenu-mega .widget_pages > ul {
+    padding-left: 0;
+}
+.dropdownmenu-mega .widget_pages li.page_item > a {
+    line-height: 24px;
+}
+
+/* magazine megamenu */
+.mega-magazine .latest-posts {
+    display: block;
+    margin-top: 18px;
+}
+.mega-magazine .latest-posts > li {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.mega-magazine .latest-posts h3 {
+    font-size: 14px;
+    line-height: 22px;
+}
+.mega-magazine .latest-posts .post-without-image h3 {
+    margin-top: 7px;
+}
+.mega-magazine .latest-posts .wp-post-image {
+    /* fix a bug that scaled image got blur when hover on it on Firefox */
+    box-shadow: 0 0 0 #000;
+}
+.mega-magazine .latest-posts a {
+    color: #bbb;
+}
+.mega-magazine .latest-posts a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+.mega-magazine .latest-posts h3 > a {
+    /* add padding to expand the hover area of each line of anchor(eliminate the hover interrupt area between the two lines) */
+    padding: 2px 0;
+}
+.mega-magazine .latest-posts .wp-post-image {
+    margin-top: 12px;
+    margin-bottom: 11px;
+}
+.mega-magazine .latest-posts .excerpt {
+    color: #aaa;
+}
+.mega-magazine .latest-posts .avatar-link {
+    float: left;
+}
+.mega-magazine .latest-posts img.avatar {
+    margin-right: 12px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}
+.avatar-rounded-square .mega-magazine .latest-posts img.avatar {
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+.avatar-square .mega-magazine .latest-posts img.avatar {
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+.mega-magazine .latest-posts a.category-link {
+    color: #999;
+    font-size: 11px;
+}
+.mega-magazine .latest-posts a.category-link:hover {
+    color: #bbb;
+}
+
+/* using max-width list at first, most of them are hard to overwrite when > 980px */
+@media screen and (max-width: 980px) {
+    li.dropdownmenu-mega > ul li.menu-item > h3.submenu-trigger-container {
+        font-size: 13px;
+        margin-bottom: 0;
+    }
+    .dropdownmenu-mega .mi-with-widget {
+        display: none;
+    }
+    .lr-mi-with-widget-visible .dropdownmenu-mega .mi-with-widget {
+        display: block;
+    }
+    .dropdownmenu-mega .widget > ul, .dropdownmenu-mega .widget > div {
+        display: none;
+        max-width: 300px;
+        padding: 30px;
+        margin: 0 auto;
+    }
+    /* product widgets */
+
+    /* recent tweet widget */
+    .dropdownmenu-mega .widget_twitter_widget > ul {
+        /* - 3px for text */
+        padding-top: 27px;
+    }
+    .dropdownmenu-mega .widget_twitter_widget li:last-child {
+        margin-bottom: 0;
+    }
+
+    /* work stream widget */
+    /* 300px is too wide for widget "work stream" */
+    .dropdownmenu-mega .widget_recent_projects_widget > .widget-content {
+        max-width: 200px;
+    }
+    
+    /* newsletter widget */
+    .dropdownmenu-mega .widget_newsletterwidget {
+        padding-top: 0;
+        margin-bottom: 0px !important;
+    }
+    .dropdownmenu-mega .widget_newsletterwidget > div {
+        /* - 3px for text */
+        padding-top: 27px;
+        background: transparent;
+        box-shadow: none;
+        border-top: none;
+    }
+
+    /* recent blog posts widget */
+    .dropdownmenu-mega .widget_recent_blog_posts_widget li:last-child img {
+        margin-bottom: 0;
+    }
+
+    /* magazine megamenu */
+
+    .mega-magazine .latest-posts-wrapper {
+        display: none;
+    }
+
+    .lr-mi-with-widget-visible .mega-magazine .latest-posts-wrapper {
+        display: block;
+    }
+    /* at present, do not try to add bottom border to the last menu item of submenu, it's much complicate for multi-level last menu items */
+    /* only add separator line if there is a submenu wrapper <li> */
+    .lr-mi-with-widget-visible .mega-magazine li + li.latest-posts-wrapper {
+        border-top: 1px solid #444;
+    }
+
+    .mega-magazine .latest-posts > li {
+        padding: 0 10px;
+        margin-bottom: 29px;
+    }
+}
+@media screen and (min-width: 601px) {
+    .mega-magazine .latest-posts {
+        /* to remove the 3px space between the inline-block elements */
+        font-size: 0;
+    }
+    .mega-magazine .latest-posts > li {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 13px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 50%;
+    }
+}
+@media screen and (min-width: 801px) {
+    .mega-magazine .latest-posts.columns2 > li {
+        width: 50%;
+    }
+    .mega-magazine .latest-posts.columns3 > li {
+        width: 33.333%;
+    }
+    .mega-magazine .latest-posts.columns4 > li {
+        width: 25%;
+    }
+}
+@media screen and (min-width: 981px) {
+    .dropdownmenu-mega {
+        position: static !important;
+    }
+
+    .dropdownmenu-mega > ul {
+        position: absolute;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 8px 0px 26px 30px;
+        left: 0 !important;
+        /* overlay the menu items */
+        z-index: 1;
+        /* fix an error that megamenu doesn't expand enough during slide effect on Chrome(sometimes it blinks) */
+        /* open the hardware accelarate */
+        -webkit-backface-visibility: hidden;
+        /* eliminate the space of inline-block */
+        font-size: 0;
+    }
+
+    .mega-not-fullwidth > ul {
+        width: 50%;
+    }
+
+    /* list style megamenu */
+    .dropdownmenu-mega li.menu-item > .submenu-trigger, .dropdownmenu-mega li.menu-item > .submenu-trigger-container .submenu-trigger {
+        background: none;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        /* don't change line-height at here, line-height should always keep to 18px to make correct space between menu item name and the description */
+    }
+    .dropdownmenu-mega li.menu-item:hover > .submenu-trigger, .dropdownmenu-mega li.menu-item:hover > .submenu-trigger-container .submenu-trigger {
+        background: none;
+    }
+    /* only archor .submenu-trigger has hover effect */
+    .dropdownmenu-mega li.menu-item > a.submenu-trigger:hover, .dropdownmenu-mega li.menu-item > .submenu-trigger-container > a.submenu-trigger:hover {
+        color: #fff;
+    }
+    .dropdownmenu-mega li.menu-item.current-menu-item > .submenu-trigger, .dropdownmenu-mega li.menu-item.current-menu-ancestor > .submenu-trigger, .dropdownmenu-mega li.menu-item.current-menu-item > .submenu-trigger-container > .submenu-trigger, .dropdownmenu-mega li.menu-item.current-menu-ancestor > .submenu-trigger-container > .submenu-trigger {
+        background: none;
+    }
+    /* only change the color of current menu ancestor if it's a link */
+    .dropdownmenu-mega li.menu-item.current-menu-item > a.submenu-trigger, .dropdownmenu-mega li.menu-item.current-menu-ancestor > a.submenu-trigger, .dropdownmenu-mega li.menu-item.current-menu-item > .submenu-trigger-container > a.submenu-trigger, .dropdownmenu-mega li.menu-item.current-menu-ancestor > .submenu-trigger-container > a.submenu-trigger {
+        color: #61b23b !important;
+    }
+    .dropdownmenu-mega li.menu-item > a.submenu-trigger:hover > .mi-desc, .dropdownmenu-mega li.menu-item > .submenu-trigger-container > a.submenu-trigger:hover > .mi-desc {
+        color: #bbb;
+    }
+    /* the first level submenu */
+    .dropdownmenu-mega > ul > li.menu-item {
+        display: inline-block;
+        vertical-align: top;
+        padding: 10px 30px 0 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        font-size: 13px;
+    }
+
+    /* the second and deeper level submenu */
+    /* reset */
+    /* must add .menu-item to distinguish menu <ul> from widget <ul> */
+    .dropdownmenu-mega > ul li.menu-item > ul {
+        position: static;
+        display: block;
+        opacity: 1;
+        max-height: none;
+        background: none;
+        width: auto;
+        padding-left: 0;
+        border-left: none;
+        border-right: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    .dropdownmenu-mega > ul ul > li.menu-item {
+        padding-left: 0;
+        padding-right: 4px;
+    }
+    .dropdownmenu-mega > ul ul > li.menu-item:first-child > .submenu-trigger {
+        border-top: none;
+    }
+
+    /* Megamenu with widgets ================================================= */
+    .dropdownmenu-mega .mi-with-widget {
+        display: block;
+    }
+    .dropdownmenu-mega .widget {
+        padding-top: 11px;
+    }
+    .dropdownmenu-mega .widget h3 {
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 20px;
+        text-transform: uppercase;
+        margin-bottom: 22px;
+    }
+    .dropdownmenu-mega .widget > ul, .dropdownmenu-mega .widget > div {
+        display: block;
+    }
+    /* product widget */
+    .dropdownmenu-mega .product_list_widget {
+        padding-top: 4px;
+        /* add space for bottom space of megamenu */
+        padding-bottom: 4px;
+    }
+
+    .dropdownmenu-mega .widget-area > .widget:last-child .product_list_widget {
+        
+    }
+
+    /* recent tweet widget */
+    .dropdownmenu-mega .widget_twitter_widget h3 > .submenu-trigger {
+        padding-left: 25px;
+    }
+    .dropdownmenu-mega .widget_twitter_widget h3 > .submenu-trigger:before {
+        top: 1px;
+        left: 0;
+    }
+
+    /* "stay connection" widget */
+    .dropdownmenu-mega .widget_newsletterwidget form {
+        margin-top: 35px;
+    }
+
+    /* recent blog posts widget */
+    .dropdownmenu-mega .widget_recent_blog_posts_widget ul.recent-posts {
+        margin-top: 26px;
+    }
+
+    /* tag widget */
+    .dropdownmenu-mega .widget_tag_cloud .tagcloud {
+        padding-top: 4px;
+    }
+
+    /* search widget */
+    .dropdownmenu-mega .widget_search .widget-content {
+        padding-top: 3px;
+    }
+
+    /* text widget, contact form 7 */
+    .dropdownmenu-mega .widget_text h3 {
+        margin-bottom: 18px;
+    }
+    .dropdownmenu-mega .wpcf7 input[type="text"], .dropdownmenu-mega .wpcf7 input[type="email"], .dropdownmenu-mega .wpcf7 textarea {
+        float: none;
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .dropdownmenu-mega .wpcf7 .wpcf7-form > p:last-of-type {
+        margin-bottom: 4px;
+    }
+
+    /* map widget */
+    /* hide title on > 980px */
+    .dropdownmenu-mega .widget_map_widget .submenu-trigger-container {
+        display: none;
+    }
+    .dropdownmenu-mega .widget_map_widget .gmap {
+        margin-top: 2px;
+        margin-bottom: 4px;
+    }
+
+    /* custom pages widget */
+    .dropdownmenu-mega .widget_pages > ul {
+        margin-top: -2px;
+    }
+
+    /* custom categories widget */ 
+    .dropdownmenu-mega .widget_categories > ul {
+        margin-top: -2px;
+    }
+
+    /* custom menu widget */
+    .dropdownmenu-mega .widget_nav_menu ul.menu {
+        margin-top: -2px;
+    }
+
+    /* default megamenu */
+    .mega-default > ul > li.menu-item, .mega-default.columns4 > ul > li.menu-item {
+        /* do not use 25%, as it will cause images with opacity transition a little jump on Firefox */
+        width: 25%;
+    }
+    .mega-default.columns2 > ul > li.menu-item {
+        width: 50%;
+    }
+    .mega-default.columns3 > ul > li.menu-item {
+        width: 33.3333%;
+    }
+    .mega-default.columns5 > ul > li.menu-item {
+        width: 20%;
+    }
+    .mega-default.columns6 > ul > li.menu-item {
+        width: 16.6667%;
+    }
+    .mega-default > ul > li.menu-item > h3 {
+        margin-top: 7px;
+        margin-bottom: 12px;
+    }
+    .mega-default > ul > li.menu-item > h3 > .submenu-trigger {
+        font-size: 14px;
+        font-weight: bold;
+        padding-top: 12px;
+        padding-bottom: 8px;
+        margin-bottom: 8px;
+        letter-spacing: .015em;
+        text-transform: uppercase;
+    }
+    .mega-default > ul > li.menu-item > h3 > a.submenu-trigger {
+        color: #aaa;
+    }
+    .mega-default > ul > li.menu-item.mi-with-icon > h3 > .submenu-trigger > i.fa {
+        top: 16px;
+    }
+
+    /* magazine megamenu */
+    /* show .latest-posts if it's grandchild of .mega-magazine(for screen size > 980px) */
+    .mega-magazine .sub-menu-wrapper {
+        width: 25%;
+    }
+    .mega-magazine .sub-menu-wrapper > .sub-menu {
+        margin-top: 6px;
+    }
+    .mega-magazine .latest-posts-wrapper.menu-item {
+        /* set padding-right to 0 to avoid double space at right */
+        padding-right: 0;
+    }
+    .mega-magazine .sub-menu-wrapper + .latest-posts-wrapper {
+        width: 75%;
+    }
+    .mega-magazine .latest-posts {
+        margin-top: 0;
+    }
+    .mega-magazine .latest-posts > li {
+        padding-right: 30px;
+    }
+    .mega-magazine .latest-posts h3 {
+        margin-bottom: 2px;
+    }
+    .mega-magazine .latest-posts .post-without-image h3 {
+        margin-top: 8px;
+    }
+    .mega-magazine .latest-posts .author-and-category {
+        /* add margin-top at here to make the bottom space adjustment easier */
+        margin-top: 11px;
+        margin-bottom: 3px;
+    }
+}
+/* $Main Header ================================================= */
+.main-header {
+    position: relative;
+    z-index: 0;
+    margin: 0 auto;
+    background: #fff;
+}
+header.sticky > .main-header > div {
+    max-width: 1110px;
+    margin: 0 auto;
+    position: relative;
+}
+/* $Title */
+header .title {
+    color: #333;
+    font: 600 30px/32px 'Open Sans', Helvetca, Arial, sans-serif;
+    text-align: center;
+}
+header .title a {
+    display: block;
+    letter-spacing: -0.015em;
+    color: #333;
+    -webkit-transition: all 0 ease;
+    -moz-transition: all 0 ease;
+    -o-transition: all 0 ease;
+    transition: all 0 ease;
+}
+header .title a:hover {
+    color: #61b23b;
+    text-decoration: none;
+}
+header .title img {
+    display: block;
+    margin: 0 auto;
+    max-height: 32px;
+}
+/* $Search Form */
+header .searchform {
+    text-align: center;
+}
+header .searchform input {
+    color: #bbbbbb;
+    font-size: 14px;
+}
+header .searchform.active input {
+    color: #555;
+}
+
+/* $Search and Shopping ================================================= */
+
+/* menu for search/shopping */
+.mobile-nav {
+    display: inline-block;
+    vertical-align: top;
+}
+.mobile-nav li {
+    line-height: 82px;
+    float: left;
+    cursor: pointer;
+    border-bottom: 4px solid transparent;
+    -webkit-transition: border-bottom .15s ease-out 0s;
+    -moz-transition: border-bottom .15s ease-out 0s;
+    -o-transition: border-bottom .15s ease-out 0s;
+    transition: border-bottom .15s ease-out 0s;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.mobile-nav li.active {
+    border-bottom-color: #61b23b;
+}
+.mobile-nav li a {
+    font: 300 1.231em/32px 'Open Sans', Helvetca, Arial, sans-serif;
+    float: left;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+    color: #3f3f3f;
+}
+.mobile-nav li a:active {
+    /* remove the grey background when click on Android Firefox */
+    background: none;
+}
+.mobile-nav a.cart {
+    /* position for cart number box */
+    position: relative;
+}
+.mobile-nav a.cart:hover {
+    /* remove grey line when hover on cart */
+    text-decoration: none;
+}
+.mobile-nav .search-icon, .mobile-nav .cart-icon {
+    line-height: 17px;
+    display: inline-block;
+    text-align: left;
+    text-indent: -9999px;
+    opacity: .3;
+    -webkit-transition: opacity .15s ease-out 0s;
+    -moz-transition: opacity .15s ease-out 0s;
+    -o-transition: opacity .15s ease-out 0s;
+    transition: opacity .15s ease-out 0s;
+    /* fix a "slight move" error on Firefox */
+    -moz-backface-visibility: hidden;
+}
+.mobile-nav a.active .search-icon, .mobile-nav a.active .cart-icon {
+    opacity: 1;
+}
+.no-touch .mobile-nav li:hover .search-icon, .no-touch .mobile-nav li:hover .cart-icon {
+    opacity: 1;
+}
+.mobile-nav .search-icon {
+    width: 16px;
+}
+.mobile-nav .cart-icon {
+    width: 19px;
+}
+/* Search */
+
+/* TODO extract the common styles of .search-box and .shopping-bag */
+.search-box {
+    position: relative;
+    display: none;
+    margin: 0 -10px;
+    padding: 13px 10px;
+    clear: both;
+    background: #333;
+}
+.search-box input[type='text'] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    border-color: #2e2e2e;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    color: #999;
+    font-size: 16px;
+}
+/* Shopping */
+.cart-number-box {
+    font-size: 11px;
+    width: auto;
+    text-align: center;
+    text-indent: 0;
+    letter-spacing: .013em;
+    color: #fff;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.cart-number-box.active {
+    background-color: #70c14a;
+}
+.cart-number-box:after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    content:' ';
+}
+/* TODO extract the common styles of .search-box and .shopping-bag */
+.shopping-bag {
+    position: relative;
+    display: none;
+    margin: 0 -10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    clear: both;
+    background: #333;
+    text-align: left;
+}
+.shopping-bag h2.widgettitle {
+    display: none;
+}
+.shopping-bag .wrap {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 30px;
+}
+.shopping-bag .wrap .empty-item {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    text-align: center;
+    opacity: .7;
+    color: #fff;
+}
+.shopping-bag ul {
+    list-style: none outside;
+}
+.shopping-bag li {
+    overflow: hidden;
+    margin-bottom: 20px;
+    list-style: none outside;
+}
+.shopping-bag li img {
+    float: left;
+    margin-right: 13px;
+    max-height: none;
+}
+.shopping-bag li a {
+    color: #ddd;
+    display: block;
+    font-size: 13px;
+    text-decoration: none;
+}
+.shopping-bag li a:hover {
+    color: #61b23b;
+}
+.shopping-bag li span.quantity {
+    display: block;
+    color: #999;
+}
+.shopping-bag dl.variation {
+    display: block;
+    padding-top: 0;
+    margin-bottom: 0;
+}
+.shopping-bag dl.variation dt, .shopping-bag dl.variation dd, .shopping-bag dl.variation dd p {
+    display: inline;
+    font-size: 13px;
+    color: #999;
+}
+.shopping-bag dl.variation dd {
+    padding-left: 0;
+}
+.shopping-bag .meta {
+    clear: both;
+    overflow: hidden;
+}
+.shopping-bag .total {
+    float: right;
+    width: 100%;
+    font-size: 11px;
+    /* override the margin-bottom of <p> */
+    margin-bottom: 0;
+    color: #999;
+}
+.shopping-bag .total strong {
+    font-size: 15px;
+    display: block;
+    margin-top: 2px;
+    color: #fff;
+}
+.shopping-bag .btn-list {
+    float: right;
+    margin-top: 14px;
+    margin-bottom: 0;
+}
+.shopping-bag .btn-list a.cart-button {
+    background: none repeat scroll 0 0 #DDDDDD;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    color: #333333;
+    font-size: 11px;
+    font-weight: normal;
+    height: 26px;
+    letter-spacing: 0.015em;
+    line-height: 26px;
+    margin-left: 3px;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.shopping-bag .btn-list a.cart-button:hover {
+    background-color: #FFFFFF;
+}
+
+.s-801, .s-981 {
+    display: none;
+}
+
+/*IE 11 hack*/
+@media all and (-ms-high-contrast:none) {
+    *::-ms-backdrop, .cart-number-box {
+        letter-spacing: 0.02em;
+    }
+}
+
+/* $Media Query ================================================= */
+/* media query using max-width list at first, most of them are hard to overwrite when > 980px */
+@media screen and (max-width: 980px) {
+    header .title img {
+        width: auto;
+    }
+    /* fix an error that menu, search box and shopping bag got a unwanted right space in slide animation on Chrome */
+    .search-box, .shopping-bag {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 301px) {
+    .shopping-bag .total {
+        float: left;
+        width: auto;
+        max-width: 75px;
+    }
+}
+@media screen and (min-width: 401px) {
+    .search-box, .shopping-bag {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media screen and (min-width: 646px) {
+    .main-header > div {
+        max-width: 1110px;
+        margin: 0 auto;
+    }
+    header .title img {
+        vertical-align: middle;
+    }
+    header .searchform {
+        text-align: left;
+    }
+    .mobile-nav {
+        float: right;
+    }
+}
+@media screen and (min-width: 801px) {
+    .s-801 {
+        display: block;
+    }
+    header.sticky .title img {
+        max-height: 32px;
+        width: auto;
+        -moz-backface-visibility: hidden;
+    }
+    header.sticky .title a {
+        line-height: 36px;
+        font-size: 24px;
+    }
+}
+@media screen and (min-width: 981px) {
+    /* main menu */
+    header .mainmenu li.mi-depth-0.mi-with-icon > .submenu-trigger span.mi-title {
+        padding-left: 21px;
+    }
+    header .mainmenu li.mi-depth-0.mi-with-icon.mi-without-title > .submenu-trigger span.mi-title {
+        padding-left: 0;
+    }
+    header .title img {
+        max-height: 90px;
+    }
+    .search-box {
+        position: absolute;
+        margin-right: 0;
+        margin-left: 0;
+        overflow: hidden;
+        padding: 20px;
+        background: rgba(216, 216, 216, .5);
+    }
+    .search-box input[type=text] {
+        font-size: 14px;
+        width: 324px;
+        border: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        -webkit-box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+    }
+    .search-box input[type=text]:focus {
+        -webkit-box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.3);
+        color:#444;
+    }
+    .shopping-bag {
+        position: absolute;
+        background: rgba(51, 51, 51, .95);
+        margin-left: 0;
+        margin-right: 0;
+        -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, .5);
+        box-shadow: 1px 2px 3px rgba(0, 0, 0, .5);
+    }
+    .shopping-bag .wrap {
+        width: 300px;
+    }
+
+    .s-981 {
+        display: block;
+    }
+}
+/* $Top Bar ================================================= */
+header .top {
+    position: relative;
+    z-index: 20;
+    -webkit-box-shadow: inset 0 -2px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 -2px 2px rgba(0, 0, 0, 0.05);
+    background: #333;
+    text-align: center;
+}
+.sticky.sticky-opacity-enabled .top {
+    background: rgba(51, 51, 51, 0.9);
+}
+/* clear fix, can't use overflow: hidden; because dropdown menu will not display */
+header .top:before, header .top:after {
+    content: " ";
+    display: table;
+}
+header .top:after {
+    clear: both;
+}
+header .top .btn-navbar {
+    position: relative;
+    height: 40px;
+    background: url("../images/svg/nav_s.svg") no-repeat center 12px;
+    -o-background-size: 18px 15px;
+    background-size: 18px 15px;
+}
+header .top-message {
+    color: #bbb;
+    font-size: 11px;
+    line-height: 30px;
+    margin-bottom: 0;
+    padding: 4px 0;
+}
+header .top-message a {
+    color: #bbb;
+}
+header .top-message a:hover {
+    color: #fff;
+}
+header .top-navi {
+    /* override */
+    padding: 0;
+}
+header .top-navi > ul li.page_item > .submenu-trigger, header .top-navi > ul li.menu-item > .submenu-trigger, header .top-navi > ul li.menu-item > .submenu-trigger-container .submenu-trigger {
+    /* reset */
+    font-size: 13px;
+}
+/* level 1 menu */
+header .top-navi > ul:before {
+    position: absolute;
+    content:'';
+    display: block;
+    height: 4px;
+    top: 0;
+    left: 0;
+    right: 0;
+    -webkit-box-shadow: inset 0px 6px 3px -3px rgba(0, 0, 0, .2);
+    box-shadow: inset 0px 6px 3px -3px rgba(0, 0, 0, .2);
+}
+header .top-navi > ul {
+    /* make the menu item text to left align */
+    text-align: left;
+}
+header .top-navi li.menu-item.mi-depth-0, header .top-navi li.page_item.pi_depth_0 {
+    /* for "position: absolute;" of submenu and "+"/"-" icons */
+    position: relative;
+}
+header .top nav.social {
+    float: none;
+}
+header .top nav.social ul {
+    display: inline-block;
+    height: 40px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+header .top nav.social li {
+    /* use float instead of inline-block to avoid the spaces between <li> */
+    float: left;
+    margin-left: 2px;
+}
+header .top nav.social a {
+    height: 40px;
+    padding: 0;
+    /* this text-align works with the text-indent below */
+    text-align: left;
+    text-indent: -50em;
+    line-height: 40px;
+}
+@media screen and (min-width: 646px) {
+    header .top > div {
+        max-width: 1110px;
+        margin: 0 auto;
+    }
+    header .top .btn-navbar {
+        float: right;
+    }
+    header .top-message {
+        float: left;
+    }
+    header .top nav.social {
+        float: right;
+    }
+    header .top nav.social ul {
+        display: block;
+    }
+
+}
+@media screen and (min-width: 801px) {
+    header.sticky.sticky-no-topbar .top {
+        display: none;
+    }
+}
+@media screen and (min-width: 981px) {
+    /* top */
+    header .top-navi {
+        float: right;
+        clear: none;
+    }
+    /* the 2 CSS rules below is for megamenu */
+    header .top-navi {
+        position: static;
+    }
+    header .top > div {
+        position: relative;
+    }
+    /* level 1 menu */
+    header .top-navi > ul:before {
+        display: none;
+    }
+    header .top-navi li.menu-item.mi-depth-0, header .top-navi li.page_item.pi_depth_0 {
+        float: left;
+    }
+    header .top-navi li.menu-item.mi-depth-0 > .submenu-trigger, header .top-navi li.page_item.pi_depth_0 > .submenu-trigger {
+        font-size: 11px;
+        margin: 0 10px;
+        padding-top: 9px;
+        padding-bottom: 9px;
+        color: #bbb;
+    }
+    header .top-navi li.menu-item.mi-depth-0:first-child > .submenu-trigger, header .top-navi li.page_item.pi_depth_0:first-child > .submenu-trigger {
+        border-top: none;
+    }
+    header .top-navi li.menu-item.mi-depth-0:last-child > .submenu-trigger, header .top-navi li.page_item.pi_depth_0:last-child > .submenu-trigger {
+        margin-right: 0;
+    }
+    header .top-navi li.menu-item.mi-depth-0 > .submenu-trigger:hover, header .top-navi li.page_item.pi_depth_0 > .submenu-trigger:hover {
+        color: #fff;
+    }
+    header .top-navi li.menu-item.mi-depth-0.menu-item-has-children:hover > .submenu-trigger, header .top-navi li.page_item.pi_depth_0.page_item_has_children:hover > .submenu-trigger {
+        color: #fff;
+    }
+    .no-touch header .top-navi li.menu-item.mi-depth-0 > .submenu-trigger:hover, .no-touch header .top-navi li.page_item.pi_depth_0 > .submenu-trigger:hover {
+        border-bottom-color: transparent;
+    }
+    .no-touch header .top-navi li.menu-item.mi-depth-0.menu-item-has-children > .submenu-trigger:hover, .no-touch header .top-navi li.page_item.pi_depth_0.page_item_has_children > .submenu-trigger:hover {
+        border-bottom-color: #61b23b;
+    }
+    header .top-navi li.menu-item.mi-depth-0.current-menu-ancestor > .submenu-trigger, header .top-navi li.page_item.pi_depth_0.current_page_ancestor > .submenu-trigger, header .top-navi li.menu-item.mi-depth-0.current-menu-item > .submenu-trigger, header .top-navi li.page_item.pi_depth_0.current_page_item > .submenu-trigger {
+        color: #61b23b;
+    }
+    header .top-navi li.menu-item.mi-depth-0.menu-item-has-children > ul, header .top-navi li.page_item.pi_depth_0.page_item_has_children > ul {
+        left: 10px;
+    }
+    header .top-navi li.menu-item.mi-depth-0.menu-item-has-children.reverse > ul, header .top-navi li.page_item.pi_depth_0.page_item_has_children.reverse > ul {
+        right: 10px;
+        left: auto;
+    }
+    header .top-navi > li.menu-item.mi-depth-0.menu-item-has-children.reverse:last-child > ul, header .top-navi li.page_item.pi_depth_0.page_item_has_children.reverse:last-child > ul {
+        right: 0;
+    }
+    /* icon/description/dropdown menu for the top-level menu items of .top */
+    header .top-navi li.mi-depth-0.mi-with-description > .submenu-trigger {
+        line-height: 14px;
+        padding-bottom: 8px;
+    }
+    header .top-navi li.mi-depth-0.mi-with-description > .submenu-trigger span.mi-desc {
+        font-size: 9px;
+    }
+    header .top-navi li.mi-depth-0.mi-with-icon > .submenu-trigger span.mi-title {
+        padding-left: 20px;
+    }
+    header .top-navi li.mi-depth-0.mi-with-icon > .submenu-trigger i.fa {
+        font-size: 14px;
+    }
+    header .top-navi li.mi-depth-0.mi-with-icon.mi-with-description > .submenu-trigger i.fa {
+        top: 0;
+    }
+    header .top-navi li.mi-depth-0.mi-with-icon.mi-without-title > .submenu-trigger i.fa {
+        top: 1px;
+    }
+    header .top-navi li.mi-depth-0.mi-with-icon.mi-without-title > .submenu-trigger span.mi-title {
+        padding-left: 0;
+    }
+    header .top-navi li.mi-depth-0.mi-with-icon.mi-without-title > .submenu-trigger i.fa {
+        /* i.fa is position: relative; in this condition, and in .top it makes the line-box 1px higher than others */
+        line-height: 13px;
+    }
+    header .top-navi li.mi-depth-0.mi-with-dropdown-arrow > .submenu-trigger span.mi-title {
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10px" height="7px"><g><g><polygon fill="%23FFFFFF" opacity="0.3" points="8.433,-0.06 4.985,3.325 1.539,-0.06 -0.066,1.546 4.985,6.566 10.037,1.546"/></g></g></svg>');
+    }
+    header .top-navi li.mi-depth-0.mi-with-dropdown-arrow:hover > .submenu-trigger span.mi-title {
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10px" height="7px"><g><g><polygon fill="%23FFFFFF" points="8.433,-0.06 4.985,3.325 1.539,-0.06 -0.066,1.546 4.985,6.566 10.037,1.546"/></g></g></svg>');
+    }
+    header .top-navi li.mi-depth-0.mi-with-description:hover > .submenu-trigger > span.mi-desc {
+        color: #bbb;
+    }
+    /* height compensate for menu item without description */
+    header .top-navi li.mi-depth-0.description-height-compensate > .submenu-trigger {
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+
+}
+@media screen and (min-width: 1171px) {
+    header.header-opacity-enabled .top {
+        background: rgba(51, 51, 51, 0.9);
+    }
+}
+/* $Header 1 ================================================= */
+ header.h1:after {
+    display: block;
+    clear: both;
+    overflow: hidden;
+    height: 0;
+    content: ' ';
+}
+.h1 .title {
+    margin: 19px 0;
+}
+.h1 .main-header .btn-navbar {
+    position: relative;
+    display: inline-block;
+    height: 50px;
+    background: url("../images/svg/nav.svg") no-repeat center 7px;
+    -o-background-size: 20px 18px;
+    background-size: 20px 18px;
+}
+.h1 .mobile-group {
+    text-align: center;
+    /* set font size to 0 to eliminate the space between inline-block */
+    font-size: 0;
+}
+.h1 .mobile-nav {
+    /* reset */
+    font-size: 14px;
+}
+.h1.sticky.sticky-opacity-enabled .main-header {
+    background: rgba(255, 255, 255, 0.9);
+}
+.boxed .h1.sticky .main-header {
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.15);
+}
+/* set this <div> to position: relative; is extramely important: width of megamenu; absolute position of navigation button, search box and cart box; */
+.h1 .main-header > div {
+    position: relative;
+}
+/* clear fix */
+ .h1 .main-header > div:before, .h1 .main-header > div:after {
+    content: " ";
+    display: table;
+}
+.h1 .main-header > div:after {
+    clear: both;
+}
+.h1 .mobile-nav li {
+    height: 46px;
+}
+.h1.sticky .mobile-nav li.border {
+    line-height: 36px;
+    float: left;
+    height: 47px;
+    padding-top: 19px;
+}
+.h1 .mobile-nav a.search, .h1 .mobile-nav a.cart {
+    padding: 0 17px;
+    border-left: 1px solid #e2e2e2;
+}
+.h1 .mobile-nav a.search {
+    padding: 0 20px;
+}
+.h1 .mobile-nav a.cart {
+    padding: 0 19px;
+}
+.h1 .mobile-nav .search-icon {
+    background: url("../images/svg/menu-search.svg") no-repeat 0 0;
+}
+.h1 .mobile-nav .cart-icon {
+    background: url("../images/svg/menu-cart.svg") no-repeat 0 0;
+}
+.h1 .cart-number-box {
+    /* do not display if it's not active */
+    display: none;
+    position: absolute;
+    line-height: 22px;
+    top: 5px;
+    left: 46px;
+    height: 22px;
+    padding: 0 8px;
+}
+.h1 .cart-number-box:after {
+    top: 8px;
+    left: -3px;
+    border-top: 3px solid transparent;
+    border-right: 3px solid rgba(0, 0, 0, .3);
+    border-bottom: 3px solid transparent;
+    /* remove blur transition at the outside of border (fix a shape bug on Firefox of XP) */
+    -moz-transform: scale(.9999);
+    transform: scale(.9999);
+}
+.h1 .cart-number-box.active {
+    display: block;
+}
+.h1 .cart-number-box.active:after {
+    border-right: 3px solid #70c14a;
+}
+@media screen and (min-width: 401px) {
+}
+@media screen and (min-width: 621px) {
+}
+@media screen and (min-width: 646px) {
+    .h1 .title {
+        float: left;
+        display: table;
+        margin-top: 0;
+        margin-bottom: 0;
+        /* magic number for logo vertical middle */
+        height: 70px;
+    }
+    .h1 .title .logo-wrapper {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .h1 .mobile-group {
+        float: right;
+    }
+    .h1 .main-header .btn-navbar {
+        display: block;
+        /* use ".mobile-group float to right, .btn-navbar float to left" to avoid the space when there is no search icon or cart icon */
+        float: left;
+        height: 70px;
+        background-position: center 26px;
+    }
+    .h1 .mobile-nav li {
+        height: 47px;
+        padding-top: 19px;
+    }
+    .h1 .cart-number-box {
+        line-height: 18px;
+        top: -19px;
+        left: 17px;
+        height: 18px;
+        padding: 0 9px;
+        -webkit-border-top-left-radius: 0;
+        border-top-left-radius: 0;
+        -webkit-border-top-right-radius: 0;
+        border-top-right-radius: 0;
+    }
+    .h1 .cart-number-box:after {
+        top: auto;
+        bottom: -3px;
+        left: 9px;
+        border-bottom: none;
+        border-top: 3px solid rgba(0, 0, 0, .3);
+        border-right: 3px solid transparent;
+        border-left: 3px solid transparent;
+    }
+    .h1 .cart-number-box.active:after {
+        border-right: 3px solid transparent;
+        border-top: 3px solid #70c14a;
+    }
+}
+@media screen and (min-width: 721px) {
+}
+@media screen and (min-width: 801px) {
+    .h1.sticky:after {
+        display: block;
+        clear: both;
+        overflow: hidden;
+        height: 0;
+        content:' ';
+    }
+    .h1.sticky .title {
+        height: 70px;
+    }
+    .h1.sticky .cart-number-box {
+        top: -19px;
+        -webkit-border-top-left-radius: 0;
+        border-top-left-radius: 0;
+        -webkit-border-top-right-radius: 0;
+        border-top-right-radius: 0;
+    }
+}
+@media screen and (min-width: 981px) {
+    .h1 .title {
+        height: 90px;
+    }
+    .h1 .main-header .btn-navbar {
+        display: none;
+    }
+    .h1 .nav-container {
+        float: right;
+    }
+    /* reserve space for the .mobile-nav with different number of icons */
+    .h1.with-search-box .nav-container {
+        padding-right: 80px;
+    }
+    .h1.with-cart-box .nav-container {
+        padding-right: 81px;
+    }
+    .h1.with-search-box.with-cart-box .nav-container {
+        padding-right: 130px;
+    }
+    .h1 .mobile-group {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    .h1 .mobile-nav li {
+        height: 57px;
+        padding-top: 29px;
+    }
+    .h1 .mobile-nav a.search {
+        padding: 0 16px;
+    }
+    .h1 .mobile-nav a.cart {
+        padding: 0 15px;
+    }
+    .h1 .cart-number-box {
+        left: 13px;
+        -webkit-border-top-left-radius: 2px;
+        border-top-left-radius: 2px;
+        -webkit-border-top-right-radius: 2px;
+        border-top-right-radius: 2px;
+    }
+    .h1 nav.mainmenu {
+        float: right;
+    }
+    .h1 nav.mainmenu > ul {
+        background-color: transparent;
+    }
+    .h1 nav.mainmenu li.menu-item.mi-depth-0, .h1 nav.mainmenu li.page_item.pi_depth_0 {
+        float: left;
+    }
+    .h1 nav.mainmenu li.menu-item.mi-depth-0 > .submenu-trigger, .h1 nav.mainmenu li.page_item.pi_depth_0 > .submenu-trigger {
+        padding-top: 34px;
+        padding-bottom: 34px;
+        color: #3f3f3f;
+        margin: 0 17px;
+    }
+    .h1.sticky nav.mainmenu li.menu-item.mi-depth-0 > .submenu-trigger, .h1.sticky nav.mainmenu li.page_item.pi_depth_0 > .submenu-trigger {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+    .h1 nav.mainmenu li.menu-item.mi-depth-0:last-child > .submenu-trigger, .h1 nav.mainmenu li.page_item.pi_depth_0:last-child > .submenu-trigger {
+        margin-right: 0;
+    }
+    .h1 nav.mainmenu li.menu-item.mi-depth-0 > .submenu-trigger:hover, .h1 nav.mainmenu li.menu-item.mi-depth-0.menu-item-has-children:hover > .submenu-trigger, .h1 nav.mainmenu li.page_item.pi_depth_0 > .submenu-trigger:hover, .h1 nav.mainmenu li.page_item.pi_depth_0.page_item_has_children:hover > .submenu-trigger {
+        color: #61b23b;
+    }
+    .h1 li.dropdownmenu-default.menu-item-has-children > ul, .h1 li.dropdownmenu-default.page_item_has_children > ul {
+        left: 17px;
+    }
+    .h1 li.dropdownmenu-default.menu-item-has-children.reverse > ul, .h1 li.dropdownmenu-default.page_item_has_children.reverse > ul {
+        right: 17px;
+        left: auto;
+    }
+    .h1 li.dropdownmenu-default.menu-item-has-children.reverse:last-child > ul, .h1 li.dropdownmenu-default.page_item_has_children.reverse:last-child > ul {
+        right: 0;
+    }
+    .h1 nav.mainmenu li.menu-item.mi-depth-0.current-menu-ancestor > .submenu-trigger, .h1 nav.mainmenu li.page_item.pi_depth_0.current_page_ancestor > .submenu-trigger, .h1 nav.mainmenu li.menu-item.mi-depth-0.current-menu-item > .submenu-trigger, .h1 nav.mainmenu li.page_item.pi_depth_0.current_page_item > .submenu-trigger {
+        color: #61b23b;
+    }
+    .h1 nav.mainmenu li.mi-depth-0.mi-with-dropdown-arrow > .submenu-trigger {
+        margin-left: 14px;
+        margin-right: 15px;
+    }
+    /* adjust the position of drop down menu */
+    .h1 nav.mainmenu li.mi-depth-0.mi-with-dropdown-arrow.menu-item-has-children > ul {
+        left: 14px;
+    }
+    .h1 nav.mainmenu li.mi-depth-0.mi-with-dropdown-arrow.menu-item-has-children.reverse > ul {
+        right: 14px;
+        left: auto;
+    }
+    .h1 nav.mainmenu li.mi-with-dropdown-arrow.mi-depth-0 > .submenu-trigger span.mi-title {
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10px" height="7px"><g><g><polygon opacity="0.2" points="8.433,-0.06 4.985,3.325 1.539,-0.06 -0.066,1.546 4.985,6.566 10.037,1.546"/></g></g></svg>');
+    }
+    .h1 nav.mainmenu li.mi-depth-0.mi-with-dropdown-arrow:hover > .submenu-trigger span.mi-title {
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10px" height="7px"><g><g><polygon fill="%2361B23B" points="8.433,-0.06 4.985,3.325 1.539,-0.06 -0.066,1.546 4.985,6.566 10.037,1.546"/></g></g></svg>');
+    }
+    .h1 nav.mainmenu li.mi-depth-0.mi-with-description > .submenu-trigger {
+        padding-top: 27px;
+        padding-bottom: 22px;
+    }
+    .h1.sticky nav.mainmenu li.mi-depth-0.mi-with-description > .submenu-trigger {
+        padding-top: 18px;
+        padding-bottom: 11px;
+    }
+    .h1 .search-box {
+        top: 100%;
+        right: 0;
+    }
+    .h1 .shopping-bag {
+        top: 100%;
+        right: 0;
+    }
+    .h1.sticky .search-box, .h1.sticky .shopping-bag {
+        top: 100%;
+        right: 0;
+    }
+}
+@media screen and (min-width: 1171px) {
+    .boxed-header header.h1, .boxed-header-rounded header.h1 {
+        max-width: 1110px;
+        margin: 0 auto;
+    }
+    /* override */
+    .boxed-header header.h1.sticky-enabled.sticky, .boxed-header-rounded header.h1.sticky-enabled.sticky {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    .boxed-header-rounded header.h1 {
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+    /* also neeed to add border-radius to .main-header, otherwise it will cover the round corner of <header> */
+    .boxed-header-rounded header.h1 .main-header {
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+    .h1.header-opacity-enabled .main-header {
+        background: rgba(255, 255, 255, 0.9);
+    }
+
+    /* TODO: temp styles, need to remove it */
+    .boxed-header .revolution-slider, .boxed-header-rounded .revolution-slider {
+        position: relative; 
+        top: -90px; 
+        margin-bottom: 90px;
+    }
+}
+
+/* $Header 2 ================================================= */
+.h2 .mainmenu .btn-navbar {
+    position: relative;
+    z-index: 3;
+    height: 60px;
+    float: left;
+    background: url("../images/svg/nav_2.svg") no-repeat center 20px transparent;
+    -o-background-size: 20px 18px;
+    background-size: 20px 18px;
+}
+/* for pseudo divider position */
+.h2 .shopping-bag, .h2 .search-box {
+    position: relative;
+}
+/* pseudo divider */
+.h2 .shopping-bag:before, .h2 .search-box:before, .h2 .mainmenu > ul:before {
+    position: absolute;
+    content:'';
+    display: block;
+    height: 4px;
+    top: 0;
+    left: 0;
+    right: 0;
+    -webkit-box-shadow: inset 0px 6px 3px -3px rgba(0, 0, 0, .2);
+    box-shadow: inset 0px 6px 3px -3px rgba(0, 0, 0, .2);
+}
+.h2 p.title {
+    margin-top: 15px;
+    margin-bottom: 14px;
+}
+.h2 p.title span {
+    display: block;
+    color: #999;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.005em;
+    margin-top: 10px;
+}
+.h2 .main-header {
+    padding-top: 5px;
+    padding-bottom: 14px;
+}
+.h2.sticky .main-header {
+    display: none;
+}
+.h2 .searchform {
+    width: 100%;
+    padding-bottom: 6px;
+    clear: both;
+}
+.h2 .searchform fieldset {
+    position: relative;
+}
+.h2 .searchform.active fieldset {
+    border-color: #555;
+}
+.h2 .searchform input {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    padding: 3px 5px;
+    /* reserve space for search button, use border instead of padding to avoid ie error */
+    border-right: 24px solid transparent;
+}
+.h2 .searchform button {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    opacity: .3;
+}
+.h2 .searchform button:hover, .h2 .searchform.active button {
+    opacity: 1;
+}
+.h2 .main-header nav.social {
+    /* override */
+    float: none;
+}
+.h2 .main-header nav.social ul {
+    overflow: visible;
+    margin-top: 8px;
+    margin-bottom: -4px;
+}
+.h2 .main-header nav.social ul li {
+    position: relative;
+}
+.h2 .main-header nav.social li span.tooltip-title {
+    font-size: 11px;
+    line-height: 34px;
+    position: absolute;
+    top: 42px;
+    display: block;
+    height: 29px;
+    padding: 0 10px;
+    text-align: center;
+    white-space: nowrap;
+    color: #fff;
+    background: url("../images/bg_tooltip.png") no-repeat center center;
+}
+.h2 .box-social {
+    clear: both;
+    min-height: 46px;
+}
+.h2 .mainmenu-container {
+    background: #333;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.h2.sticky.sticky-opacity-enabled .mainmenu-container {
+    background: rgba(51, 51, 51, 0.9);
+}
+.boxed .h2.sticky .mainmenu-container {
+    max-width: 1110px;
+    margin: 0 auto;
+}
+.h2 .mobile-group {
+    text-align: right;
+}
+.h2 ul.mobile-nav {
+    /* override */
+    display: inline-block;
+}
+.h2 .mobile-nav li {
+    height: 56px;
+}
+.h2 .mobile-nav li a {
+    border-left: 1px solid #4c4c4c;
+}
+.h2 .mobile-nav li:first-child a {
+    border-left: 0;
+}
+.h2 .mobile-nav li:first-child a.cart {
+    padding-left: 0;
+}
+.h2 .mobile-nav a.search {
+    margin-top: 13px;
+    padding: 0 20px;
+}
+.h2 .mobile-nav a.cart {
+    margin-top: 13px;
+    padding-left: 19px;
+}
+.h2 .mobile-nav .search-icon {
+    background: url("../images/svg/menu-search_2.svg") no-repeat 0 0;
+}
+.h2 .mobile-nav .cart-icon {
+    background: url("../images/svg/menu-cart_2.svg") no-repeat 0 0;
+}
+.h2 .cart-number-box {
+    display: inline-block;
+    margin-left: 4px;
+    position: relative;
+    line-height: 22px;
+    height: 22px;
+    top: -2px;
+    padding: 0 8px;
+    background-color: rgba(255, 255, 255, .3);
+}
+.h2 .cart-number-box:after {
+    top: 8px;
+    bottom: auto;
+    left: -3px;
+    border-top: 3px solid transparent;
+    border-right: 3px solid rgba(255, 255, 255, .3);
+    border-bottom: 3px solid transparent;
+}
+.h2 .cart-number-box.active {
+    background: #70c14a;
+}
+.h2 .cart-number-box.active:after {
+    border-right: 3px solid #70c14a;
+}
+/* reset */
+.h2 .shopping-bag ul {
+    display: block;
+}
+@media screen and (min-width: 401px) {
+    .h2 .mainmenu-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media screen and (min-width: 621px) {
+}
+@media screen and (min-width: 646px) {
+    .h2 p.title {
+        float: left;
+        margin-top: 11px;
+        margin-bottom: 17px;
+    }
+    .h2 p.title a {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    /* for unlinked logo */
+    .h2 p.title > img {
+        display: inline-block;
+    }
+    .h2 p.title span {
+        display: inline;
+        padding-left: 20px;
+    }
+    .h2 .searchform {
+        margin-top: 27px;
+    }
+    .h2 .searchform input {
+        padding-left: 9px;
+        padding-right: 27px;
+    }
+    .h2 .main-header nav.social {
+        text-align: left;
+    }
+}
+@media screen and (min-width: 721px) {
+}
+@media screen and (min-width: 801px) {
+    .h2.sticky {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    .h2.sticky .mainmenu-container {
+        -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .14);
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .14);
+    }
+}
+@media screen and (min-width: 981px) {
+    /* for logo vertical middle */
+    .h2 .main-header {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .h2 .main-header > div:first-child {
+        display: table;
+        /* min-height not works with display: table; on Firefox */
+        height: 90px;
+        min-height: 90px;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .h2 p.title {
+        float: none;
+        display: table-cell;
+        vertical-align: middle;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: left;
+    }
+    .h2 .shopping-bag, .h2 .search-box {
+        position: absolute;
+    }
+    .h2 .shopping-bag:before, .h2 .search-box:before, .h2 .mainmenu > ul:before {
+        display: none;
+    }
+    .h2 .searchform {
+        display: table-cell;
+        vertical-align: middle;
+        width: auto;
+        clear: none;
+        margin-top: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .h2 .searchform > fieldset {
+        float: right;
+    }
+    .h2 .searchform input {
+        width: 235px;
+        margin-right: 0;
+    }
+    .h2 .main-header nav.social {
+        float: right;
+    }
+    .h2 .main-header nav.social ul {
+        margin-bottom: 0;
+    }
+    .h2 .box-social {
+        display: table-cell;
+        vertical-align: middle;
+        clear: none;
+        min-height: 0;
+    }
+    .boxed .h2 .mainmenu-container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .h2 nav.mainmenu {
+        position: relative;
+        max-width: 1110px;
+        margin: 0 auto;
+    }
+    /* level 1 menu */
+    .h2 nav.mainmenu > ul {
+        display: block!important;
+        position: static;
+        margin-left: 0;
+        margin-right: 0;
+        clear: none;
+    }
+    .h2 nav.mainmenu li.menu-item.mi-depth-0, .h2 nav.mainmenu li.page_item.pi_depth_0 {
+        float: left;
+    }
+    .h2 nav.mainmenu li.menu-item.mi-depth-0 > .submenu-trigger, .h2 nav.mainmenu li.page_item.pi_depth_0 > .submenu-trigger {
+        padding-top: 19px;
+        padding-bottom: 19px;
+        color: #fff;
+        margin-left: 0;
+        margin-right: 34px;
+    }
+    .h2 nav.mainmenu li.menu-item.mi-depth-0 > .submenu-trigger:hover, .h2 nav.mainmenu li.menu-item.mi-depth-0.menu-item-has-children:hover > .submenu-trigger, .h2 nav.mainmenu li.page_item.pi_depth_0 > .submenu-trigger:hover, .h2 nav.mainmenu li.page_item.pi_depth_0.page_item_has_children:hover > .submenu-trigger {
+        color: #61b23b;
+    }
+    .h2 li.dropdownmenu-default.menu-item-has-children > ul, .h2 li.dropdownmenu-default.page_item_has_children > ul {
+        left: 0;
+    }
+    .h2 nav.mainmenu li.menu-item.mi-depth-0.current-menu-ancestor > .submenu-trigger, .h2 nav.mainmenu li.page_item.pi_depth_0.current_page_ancestor > .submenu-trigger, .h2 nav.mainmenu li.menu-item.mi-depth-0.current-menu-item > .submenu-trigger, .h2 nav.mainmenu li.page_item.pi_depth_0.current_page_item > .submenu-trigger {
+        color: #61b23b;
+    }
+    .h2 nav.mainmenu li.mi-depth-0.mi-with-dropdown-arrow > .submenu-trigger span.mi-title {
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10px" height="7px"><g><g><polygon fill="%23FFFFFF" opacity="0.3" points="8.433,-0.06 4.985,3.325 1.539,-0.06 -0.066,1.546 4.985,6.566 10.037,1.546"/></g></g></svg>');
+    }
+    .h2 nav.mainmenu li.mi-depth-0.mi-with-dropdown-arrow:hover > .submenu-trigger span.mi-title {
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10px" height="7px"><g><g><polygon fill="%2361B23B" points="8.433,-0.06 4.985,3.325 1.539,-0.06 -0.066,1.546 4.985,6.566 10.037,1.546"/></g></g></svg>');
+    }
+    .h2 nav.mainmenu li.mi-depth-0.mi-with-description > .submenu-trigger {
+        padding-top: 14px;
+        padding-bottom: 13px;
+    }
+    .h2 nav.mainmenu li.mi-depth-0.mi-with-description:hover > .submenu-trigger > span.mi-desc {
+        color: #bbb;
+    }
+    /* height compensate for menu items without description */
+    .h2 nav.mainmenu li.mi-depth-0.description-height-compensate > .submenu-trigger {
+        padding-top: 23px;
+        padding-bottom: 23px;
+    }
+    .h2 .mobile-nav a.search {
+        padding: 0 16px;
+    }
+    .h2 .mobile-nav a.cart {
+        padding-left: 15px;
+    }
+    .h2 .cart-number-box {
+        margin-left: 8px;
+    }
+    .h2 .search-box, .h2 .shopping-bag {
+        top: 60px;
+        right: 0;
+    }
+    /* height compensate for .mobile-nav */
+    .h2 .mobile-nav.description-height-compensate li {
+        height: 64px;
+    }
+    .h2 .mobile-nav.description-height-compensate a.search, .h2 .mobile-nav.description-height-compensate a.cart {
+        margin-top: 17px;
+    }
+    .h2 .search-box.description-top-compensate, .h2 .shopping-bag.description-top-compensate {
+        top: 68px;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .boxed .h2.sticky {
+        width: 100%;
+    }
+    .boxed .h2.sticky .mainmenu {
+        max-width: 1110px;
+        margin: 0 auto!important;
+    }
+}
+@media screen and (min-width: 1171px) {
+    .boxed .h2 .mainmenu-container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .h2.header-opacity-enabled .main-header {
+        background: rgba(255, 255, 255, 0.9);
+    }
+    .h2.header-opacity-enabled .mainmenu-container {
+        background: rgba(51, 51, 51, 0.9);
+    }
+}
+/* Retina Ready ================================================= */
+
+/* place retina ready code at the bottom because respond.js will crash when meet them */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+	.dropdownmenu-mega .widget .star-rating {
+		background-image: url("../images/stars@2x.png");
+		background-size: 18px 48px;
+	}
+
+	.dropdownmenu-mega .widget .star-rating > span {
+		background-image: url("../images/stars@2x.png");
+		background-size: 18px 48px;
+	}
+}
