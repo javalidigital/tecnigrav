@@ -1,0 +1,74 @@
+/*
+Theme Name: Converio Child Theme
+Theme URI: http: http://thememotive.com/
+Description: Child theme is the recommended way to modify an existing theme if you want to make changes in the theme.
+Author: ThemeMotive
+Author URI: http://thememotive.com/
+Template: converio
+Version: 1.0.0
+*/
+
+@import url("../converio/style.css");
+.content {padding:1px 0 0px;}
+.topo-containter {max-width: 1500px; background-color: #28166f; }
+.topo-barra {max-width: 1110px; margin: 0 auto; text-align: right; background-color: #28166f; color: #fff; padding: 6px;}
+#lang_sel {height: 20px;  float:left; z-index: 99; text-align: left;}
+@media screen and (min-width: 981px) {
+header .title img {
+  max-height: 55px!important;
+}
+}
+/*Add your custom styles below:*/
+/*SLIDER*/
+#rev_slider_2_1 > ul > li.tp-revslider-slidesli.active-revslide.current-sr-slide-visible > div.tp-caption.bota-home-slider1.tp-fade.tp-resizeme.start > a {color: #fff; text-decoration: none;}
+
+.col3 {
+  width: 32.333%;
+}
+body > div.root > footer > section.widgets.columns > article:nth-child(1) {width: 50%%;}
+
+body > div.root > section.content.wide > div.full-width-bg.white\2c.brown\2c.purple > div.content-container > section > div.content-container > p.slogan {font-size: 27px;}
+body > div.root > section.content.wide > div.full-width-bg.white\2c.brown\2c.purple > div.content-container > section > div.content-container {padding: 29px 0;}
+a.btn.light.large {background-color: #f5f5f5;}
+.map-content {display: none;}
+/*body > div.root > section > section > div.content-container {padding-top: 50px;}*/
+
+.map-frame {
+    width: 100%;
+    height: 350px;
+    position: relative;
+}
+footer {margin-top: -10px;}
+
+body > div > div.map-frame > footer > section.widgets.columns > article.widget.col.col4.widget_nav_menu {padding-left: 88px;}
+div.tp-rightarrow.tparrows.default.round {right: 0px!important;}
+div.tp-leftarrow.tparrows.default.round {left: 0px!important;}
+/*box contato*/
+.dados-contato {float: right; position: fixed; background-attachment: fixed; background-color: #f5f5f5; z-index: 99;
+top: 50%;
+right: 0%;
+box-shadow: -2px 2px 6px #000;
+padding: 10px;
+}
+.fa {
+  padding: 0;
+  font-size: 20px;
+  padding-right: 4px;
+}
+
+.dados-contato li {list-style: none; text-align: center; color: #28166f;}
+
+.cota {background-color: #f1c40f; color: #28166f; padding: 9px;}
+.cota:hover {background-color: rgb(255,114,0);   padding-top: 8px;}
+.titulo-float {font-style: italic;}
+.telfloat {text-align: left!important; padding-bottom: 4px!important;}
+.cota {clear: both; box-shadow: 2px 2px 2px;}
+.sup {font-size: 14px; color:#28166f; font-weight: bold; padding-bottom: 7px;}
+.cota a {font-weight: bold; text-decoration: none; color: #28166f; padding: 5px 0 5px 0;}
+.fa {font-size: 42px; color: #28166f; padding-right: 20px;}
+.iconfloat{
+  width: 2%;
+  float: left;
+}
+.sup {width: 82%; float: right;}
+.iconfloat .sup {display: inline-block;}

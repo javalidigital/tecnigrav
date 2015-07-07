@@ -1,0 +1,342 @@
+# Copyright (C) 2013 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version:  \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/iworks-sliders\n"
+"POT-Creation-Date: 2014-09-17 19:30:00+00:00\n"
+"PO-Revision-Date: 2013-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Marcin Pietrzak <marcin@iworks.pl>\n"
+"Language-Team: Marcin Pietrzak <marcin@iworks.pl>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: admin/index.php:7
+msgid "Silders Configuration"
+msgstr "Konfiguracja pokazu slajdów"
+
+#: etc/options.php:23
+msgid "Main page slider"
+msgstr "Pokaz slajdów na stronę główną"
+
+#: etc/options.php:28 includes/class-iworks-sliders.php:168
+#: includes/class-iworks-sliders.php:565 includes/class-iworks-sliders.php:582
+#: includes/class-iworks-sliders.php:688 includes/class-iworks-sliders.php:741
+msgid "Slider"
+msgstr "Pokaz slajdów"
+
+#: etc/options.php:39 includes/class-iworks-sliders.php:931
+msgid "None"
+msgstr "Brak"
+
+#: etc/sliders.php:5
+msgid "Best Slider"
+msgstr ""
+
+#: etc/sliders.php:24
+msgid "Slide Show Slider"
+msgstr ""
+
+#: etc/sliders.php:37
+msgid "Selling Slider"
+msgstr ""
+
+#: etc/sliders.php:54
+msgid "Simple Slider"
+msgstr ""
+
+#: etc/sliders.php:71
+msgid "Form Slider"
+msgstr ""
+
+#: etc/sliders.php:78
+msgid "Enter form description."
+msgstr "Wprowadź opis formularza."
+
+#: etc/sliders.php:89
+msgid "Featured Article Slider"
+msgstr ""
+
+#: etc/sliders.php:108
+msgid "Promo Slider"
+msgstr ""
+
+#: etc/sliders.php:132
+msgid "Premium Slider"
+msgstr ""
+
+#: etc/sliders.php:149
+msgid "Modern Slider"
+msgstr ""
+
+#: etc/sliders.php:168
+msgid "Product Slider"
+msgstr ""
+
+#: etc/sliders.php:182
+msgid "Landing Slider"
+msgstr ""
+
+#: etc/sliders.php:203
+msgid "Content Slider"
+msgstr ""
+
+#: includes/class-iworks-options.php:93
+msgid "An error occurred while getting the configuration."
+msgstr "Wystąpił błąd w czasie zapisywania konfiguracji."
+
+#: includes/class-iworks-options.php:506
+msgid "Save Changes"
+msgstr "Zapsz zmiany"
+
+#: includes/class-iworks-sliders.php:159
+msgid "Number of slides"
+msgstr "Liczba slajdów"
+
+#: includes/class-iworks-sliders.php:169
+msgid "Order"
+msgstr "Kolejność"
+
+#: includes/class-iworks-sliders.php:353
+msgid "Previous"
+msgstr "Poprzedni"
+
+#: includes/class-iworks-sliders.php:354
+msgid "Next"
+msgstr "Następny"
+
+#: includes/class-iworks-sliders.php:413
+msgid "Email"
+msgstr "Email"
+
+#: includes/class-iworks-sliders.php:414
+msgid "Last Name"
+msgstr "Nazwisko"
+
+#: includes/class-iworks-sliders.php:415
+msgid "Message"
+msgstr "Wiadomość"
+
+#: includes/class-iworks-sliders.php:416
+msgid "Name"
+msgstr "Imię"
+
+#: includes/class-iworks-sliders.php:417
+msgid "Phone"
+msgstr "Telefon"
+
+#: includes/class-iworks-sliders.php:418
+msgid "Service"
+msgstr "Serwis"
+
+#: includes/class-iworks-sliders.php:419
+msgid "Submit"
+msgstr "Wyślij"
+
+#: includes/class-iworks-sliders.php:514
+msgid "Settings"
+msgstr "Ustawienia"
+
+#: includes/class-iworks-sliders.php:534 includes/class-iworks-sliders.php:535
+#: includes/class-iworks-sliders.php:564 includes/class-iworks-sliders.php:570
+#: includes/class-iworks-sliders.php:576 includes/class-iworks-sliders.php:902
+msgid "Sliders"
+msgstr "Pokazy slajdów"
+
+#: includes/class-iworks-sliders.php:542 includes/class-iworks-sliders.php:594
+#: includes/class-iworks-sliders.php:606 includes/class-iworks-sliders.php:910
+msgid "Slides"
+msgstr "Slajdy"
+
+#: includes/class-iworks-sliders.php:566 includes/class-iworks-sliders.php:596
+msgid "Add New"
+msgstr "Dodaj"
+
+#: includes/class-iworks-sliders.php:567
+msgid "Add New Slider"
+msgstr "Dodaj pokaz slajdów"
+
+#: includes/class-iworks-sliders.php:568
+msgid "Edit Slider"
+msgstr "Edycja pokazu slajdów"
+
+#: includes/class-iworks-sliders.php:569
+msgid "New Slider"
+msgstr "Nowy pokaz slajdów"
+
+#: includes/class-iworks-sliders.php:571
+msgid "View Slider"
+msgstr "Zobacz pokaz slajdów"
+
+#: includes/class-iworks-sliders.php:572
+msgid "Search Slider"
+msgstr "Szukaj pokazu slajdów"
+
+#: includes/class-iworks-sliders.php:573
+msgid "No sliders found"
+msgstr "Nie znalesiono żadnego pokazu slajdów"
+
+#: includes/class-iworks-sliders.php:574
+msgid "No sliders found in Trash"
+msgstr "W koszu nie ma żadnego pokazu slajdów"
+
+#: includes/class-iworks-sliders.php:579
+msgid "This post type allow to create sliders."
+msgstr "Umożliwia toworzenie pokazów slajdów"
+
+#: includes/class-iworks-sliders.php:595 includes/class-iworks-sliders.php:611
+msgid "Slide"
+msgstr "Slajd"
+
+#: includes/class-iworks-sliders.php:597
+msgid "Add New Slide"
+msgstr "Dodaj slajd"
+
+#: includes/class-iworks-sliders.php:598
+msgid "Edit Slide"
+msgstr "Edytuj slajd"
+
+#: includes/class-iworks-sliders.php:599
+msgid "New Slide"
+msgstr "Nowy slajd"
+
+#: includes/class-iworks-sliders.php:600
+msgid "All Slides"
+msgstr "Wszystkie slajdy"
+
+#: includes/class-iworks-sliders.php:601
+msgid "View Slide"
+msgstr "Zobacz slajd"
+
+#: includes/class-iworks-sliders.php:602
+msgid "Search Slide"
+msgstr "Szukaj slajdów"
+
+#: includes/class-iworks-sliders.php:603
+msgid "No slides found"
+msgstr "Brak slajdów"
+
+#: includes/class-iworks-sliders.php:604
+msgid "No slides found in Trash"
+msgstr "W koszy nie ma żadnego slajdu"
+
+#: includes/class-iworks-sliders.php:609
+msgid "This post type allow to add slide to slider."
+msgstr "Umożliwia tworzenie slajdów dołączanych do prezentacji slajdów."
+
+#: includes/class-iworks-sliders.php:641
+msgid "Options"
+msgstr "Opcje"
+
+#: includes/class-iworks-sliders.php:649
+msgid "Configuration"
+msgstr "Konfiguracja"
+
+#: includes/class-iworks-sliders.php:657
+msgid "Select slider"
+msgstr "Wybirze pokaz slajdów"
+
+#: includes/class-iworks-sliders.php:691
+msgid "Video code"
+msgstr "Kod filmu"
+
+#: includes/class-iworks-sliders.php:692
+msgid "Link URL"
+msgstr "Odnośnik"
+
+#: includes/class-iworks-sliders.php:693 includes/class-iworks-sliders.php:760
+msgid "Link text"
+msgstr "Tekst odnośnika"
+
+#: includes/class-iworks-sliders.php:694
+msgid "Link class"
+msgstr "Klasa odnośnika"
+
+#: includes/class-iworks-sliders.php:695
+msgid "Button URL"
+msgstr "Adres klawisza"
+
+#: includes/class-iworks-sliders.php:696 includes/class-iworks-sliders.php:758
+msgid "Button text"
+msgstr "Tekst klawisza"
+
+#: includes/class-iworks-sliders.php:697
+msgid "Select slider first!"
+msgstr "Najpierw proszę wybrać pokaz slajdów!"
+
+#: includes/class-iworks-sliders.php:750
+msgid "Pattern"
+msgstr "Znacznik"
+
+#: includes/class-iworks-sliders.php:753
+msgid "Auto Slides"
+msgstr "Atomatyczne odtwarzanie"
+
+#: includes/class-iworks-sliders.php:754
+msgid "Delay"
+msgstr "Opóźnienie"
+
+#: includes/class-iworks-sliders.php:755
+msgid "Change slide on click"
+msgstr "Zmiana slajdu po kliknięciu"
+
+#: includes/class-iworks-sliders.php:756
+msgid "Pause on hover"
+msgstr "Zatrzymaj po najechaniu"
+
+#: includes/class-iworks-sliders.php:757
+msgid "Pause on action"
+msgstr "Zatrzymaj jak coś się dzieje"
+
+#: includes/class-iworks-sliders.php:759
+msgid "Button url"
+msgstr "Adres klawisza"
+
+#: includes/class-iworks-sliders.php:761
+msgid "Link url"
+msgstr "Adres odnośnika"
+
+#: includes/class-iworks-sliders.php:762
+msgid "Email address"
+msgstr "Adres email"
+
+#: includes/class-iworks-sliders.php:763
+msgid "Services"
+msgstr "Serwisy"
+
+#: includes/class-iworks-sliders.php:763
+msgid ""
+"Enter pair of key:value in one line, use \":\" to separate both values or "
+"just write a line for both key and value."
+msgstr ""
+"Wprowadź parę klucz:wartość rozdzieloną znakiem \":\" lub po prostu dodaj "
+"linię, która będzie jednocześnie kluczem i wartością."
+
+#: includes/class-iworks-sliders.php:764
+msgid "Form title"
+msgstr "Tytuł formularza"
+
+#. Plugin Name of the plugin/theme
+msgid "Multipurpose Sliders"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://iworks.pl/iworks-sliders"
+msgstr "http://iworks.pl/iworks-sliders"
+
+#. Description of the plugin/theme
+msgid "Create sliders and use on certain post."
+msgstr "Umożliwia skonfgurowanie pokazów slajdów na wybranych stronach."
+
+#. Author of the plugin/theme
+msgid "Marcin Pietrzak"
+msgstr "Marcin Pietrzak"
+
+#. Author URI of the plugin/theme
+msgid "http://iworks.pl/"
+msgstr "http://iworks.pl/"
+
+#~ msgid "Slider %d"
+#~ msgstr "Pokaz slajdów %d"

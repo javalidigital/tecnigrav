@@ -1,0 +1,336 @@
+# Copyright (C) 2014 Multipurpose Sliders
+# This file is distributed under the same license as the Multipurpose Sliders package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Multipurpose Sliders 1.6.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/iworks-sliders\n"
+"POT-Creation-Date: 2014-09-17 19:32:07+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Marcin Pietrzak <marcin@iworks.pl>\n"
+"Language-Team: Marcin Pietrzak <marcin@iworks.pl>\n"
+
+#: admin/index.php:7
+msgid "Silders Configuration"
+msgstr ""
+
+#: etc/options.php:23
+msgid "Main page slider"
+msgstr ""
+
+#: etc/options.php:28 includes/class-iworks-sliders.php:168
+#: includes/class-iworks-sliders.php:565 includes/class-iworks-sliders.php:582
+#: includes/class-iworks-sliders.php:688 includes/class-iworks-sliders.php:741
+msgid "Slider"
+msgstr ""
+
+#: etc/options.php:39 includes/class-iworks-sliders.php:931
+msgid "None"
+msgstr ""
+
+#: etc/sliders.php:5
+msgid "Best Slider"
+msgstr ""
+
+#: etc/sliders.php:24
+msgid "Slide Show Slider"
+msgstr ""
+
+#: etc/sliders.php:37
+msgid "Selling Slider"
+msgstr ""
+
+#: etc/sliders.php:54
+msgid "Simple Slider"
+msgstr ""
+
+#: etc/sliders.php:71
+msgid "Form Slider"
+msgstr ""
+
+#: etc/sliders.php:78
+msgid "Enter form description."
+msgstr ""
+
+#: etc/sliders.php:89
+msgid "Featured Article Slider"
+msgstr ""
+
+#: etc/sliders.php:108
+msgid "Promo Slider"
+msgstr ""
+
+#: etc/sliders.php:132
+msgid "Premium Slider"
+msgstr ""
+
+#: etc/sliders.php:149
+msgid "Modern Slider"
+msgstr ""
+
+#: etc/sliders.php:168
+msgid "Product Slider"
+msgstr ""
+
+#: etc/sliders.php:182
+msgid "Landing Slider"
+msgstr ""
+
+#: etc/sliders.php:203
+msgid "Content Slider"
+msgstr ""
+
+#: includes/class-iworks-options.php:93
+msgid "An error occurred while getting the configuration."
+msgstr ""
+
+#: includes/class-iworks-options.php:506
+msgid "Save Changes"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:159
+msgid "Number of slides"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:169
+msgid "Order"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:353
+msgid "Previous"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:354
+msgid "Next"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:413
+msgid "Email"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:414
+msgid "Last Name"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:415
+msgid "Message"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:416
+msgid "Name"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:417
+msgid "Phone"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:418
+msgid "Service"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:419
+msgid "Submit"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:514
+msgid "Settings"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:534 includes/class-iworks-sliders.php:535
+#: includes/class-iworks-sliders.php:564 includes/class-iworks-sliders.php:570
+#: includes/class-iworks-sliders.php:576 includes/class-iworks-sliders.php:902
+msgid "Sliders"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:542 includes/class-iworks-sliders.php:594
+#: includes/class-iworks-sliders.php:606 includes/class-iworks-sliders.php:910
+msgid "Slides"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:566 includes/class-iworks-sliders.php:596
+msgid "Add New"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:567
+msgid "Add New Slider"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:568
+msgid "Edit Slider"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:569
+msgid "New Slider"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:571
+msgid "View Slider"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:572
+msgid "Search Slider"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:573
+msgid "No sliders found"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:574
+msgid "No sliders found in Trash"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:579
+msgid "This post type allow to create sliders."
+msgstr ""
+
+#: includes/class-iworks-sliders.php:595 includes/class-iworks-sliders.php:611
+msgid "Slide"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:597
+msgid "Add New Slide"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:598
+msgid "Edit Slide"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:599
+msgid "New Slide"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:600
+msgid "All Slides"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:601
+msgid "View Slide"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:602
+msgid "Search Slide"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:603
+msgid "No slides found"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:604
+msgid "No slides found in Trash"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:609
+msgid "This post type allow to add slide to slider."
+msgstr ""
+
+#: includes/class-iworks-sliders.php:641
+msgid "Options"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:649
+msgid "Configuration"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:657
+msgid "Select slider"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:691
+msgid "Video code"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:692
+msgid "Link URL"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:693 includes/class-iworks-sliders.php:760
+msgid "Link text"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:694
+msgid "Link class"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:695
+msgid "Button URL"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:696 includes/class-iworks-sliders.php:758
+msgid "Button text"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:697
+msgid "Select slider first!"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:750
+msgid "Pattern"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:753
+msgid "Auto Slides"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:754
+msgid "Delay"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:755
+msgid "Change slide on click"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:756
+msgid "Pause on hover"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:757
+msgid "Pause on action"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:759
+msgid "Button url"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:761
+msgid "Link url"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:762
+msgid "Email address"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:763
+msgid "Services"
+msgstr ""
+
+#: includes/class-iworks-sliders.php:763
+msgid ""
+"Enter pair of key:value in one line, use \":\" to separate both values or "
+"just write a line for both key and value."
+msgstr ""
+
+#: includes/class-iworks-sliders.php:764
+msgid "Form title"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Multipurpose Sliders"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://iworks.pl/iworks-sliders"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Create sliders and use on certain post."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Marcin Pietrzak"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://iworks.pl/"
+msgstr ""

@@ -1,0 +1,97 @@
+#menu-posts-events .wp-menu-image:before
+{
+    content: '\f164' !important;
+}
+/**
+ * tabs
+ */
+#hasadmintabs ul.ui-tabs-nav
+{
+    border-bottom:1px solid #dfdfdf;
+    font-size:12px;
+    height:29px;
+    list-style-image:none;
+    list-style-position:outside;
+    list-style-type:none;
+    margin:13px 0 0;
+    overflow:visible;
+    padding:0 0 0 8px;
+}
+
+#hasadmintabs ul.ui-tabs-nav li
+{
+    display:block;
+    float:left;
+    line-height:200%;
+    list-style-image:none;
+    list-style-position:outside;
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    position:relative;
+    text-align:center;
+    white-space:nowrap;
+    width:auto;
+}
+
+#hasadmintabs ul.ui-tabs-nav li a
+{
+    background:transparent none no-repeat scroll 0 50%;
+    border-bottom:1px solid #dfdfdf;
+    display:block;
+    float:left;
+    line-height:28px;
+    padding:1px 13px 0;
+    position:relative;
+    text-decoration:none;
+}
+
+#hasadmintabs ul.ui-tabs-nav li.ui-tabs-selected a
+,#hasadmintabs ul.ui-tabs-nav li.ui-tabs-active a
+{
+    -moz-border-radius-topleft:4px;
+    -moz-border-radius-topright:4px;
+    border:1px solid #dfdfdf;
+    border-bottom-color:#f9f9f9;
+    color:#333333;
+    font-weight:normal;
+    padding:0 12px;
+}
+
+#hasadmintabs ul.ui-tabs-nav a:focus, a:active
+{
+    outline-color:-moz-use-text-color;
+    outline-style:none;
+    outline-width:medium;
+}
+
+#dashboard-widgets .appointment-book:before
+{
+    content: "\f110";
+}
+
+#iworks_events_admin_index .postbox-container a
+{
+    text-decoration: none;
+}
+
+#iworks_events_admin_index .postbox-container .description a
+{
+    background: transparent url(../images/iworks-logo.png?ver=20131229) no-repeat 2px 50%;
+    background-image: none, url(../images/iworks-logo.svg?ver=20131229);
+    background-size: 16px;
+    color: black;
+    padding: 5px 0 5px 20px;
+}
+.ui-datepicker td {
+    border: 1px solid #CCC;
+    padding: 0;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+    border: solid #FFF;
+    border-width: 1px 0 0 1px;
+}
+

@@ -1,0 +1,290 @@
+# Copyright (C) 2014 iWorks Events
+# This file is distributed under the same license as the iWorks Events package.
+msgid ""
+msgstr ""
+"Project-Id-Version: iWorks Events 1.2.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/iworks-events\n"
+"POT-Creation-Date: 2014-04-02 19:40:10+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Marcin Pietrzak <marcin@iworks.pl>\n"
+"Language-Team: Marcin Pietrzak <marcin@iworks.pl>\n"
+
+#: admin/index.php:7
+msgid "Events Settings"
+msgstr ""
+
+#: admin/index.php:22
+msgid "Need Assistance?"
+msgstr ""
+
+#: admin/index.php:24
+msgid "Problems? The links bellow can be very helpful to you"
+msgstr ""
+
+#: admin/index.php:26
+msgid "Mail to me: %s"
+msgstr ""
+
+#: admin/index.php:29
+msgid "Created by: "
+msgstr ""
+
+#: etc/options.php:23 vendor/iworks/events.php:690
+msgid "Upcoming events"
+msgstr ""
+
+#: etc/options.php:28
+msgid "Show Upcoming Events"
+msgstr ""
+
+#: etc/options.php:36
+msgid "Numer of events"
+msgstr ""
+
+#: etc/options.php:42
+msgid "Other"
+msgstr ""
+
+#: etc/options.php:47
+msgid "Category for past events"
+msgstr ""
+
+#: etc/options.php:49
+msgid "There is no need to assign to this category."
+msgstr ""
+
+#: etc/options.php:54
+msgid "Show alerts"
+msgstr ""
+
+#: etc/options.php:61
+msgid "Taxonomy event list type"
+msgstr ""
+
+#: etc/options.php:65
+msgid "anchor"
+msgstr ""
+
+#: etc/options.php:66
+msgid "Create list of anchors with taxonomy slug."
+msgstr ""
+
+#: etc/options.php:69
+msgid "link"
+msgstr ""
+
+#: etc/options.php:70
+msgid "Create list of links to taxonomy."
+msgstr ""
+
+#: etc/options.php:83
+msgid "None"
+msgstr ""
+
+#: templates/twentyfourteen/archive-events.php:20
+#: templates/twentyfourteen/single-events.php:11
+#: templates/twentyfourteen/taxonomy-event_category.php:20
+msgid "Please install IworksEvents plugin!"
+msgstr ""
+
+#: templates/twentyfourteen/single-events.php:39
+msgid "All"
+msgstr ""
+
+#: vendor/iworks/events-taxonomy-category.php:52
+msgctxt "taxonomy general name"
+msgid "Event Categories"
+msgstr ""
+
+#: vendor/iworks/events-taxonomy-category.php:53
+msgctxt "taxonomy singular name"
+msgid "Event Category"
+msgstr ""
+
+#: vendor/iworks/events-taxonomy-category.php:54
+msgid "Search Event Categories"
+msgstr ""
+
+#: vendor/iworks/events-taxonomy-category.php:55
+msgid "Popular Event Categories"
+msgstr ""
+
+#: vendor/iworks/events-taxonomy-category.php:56
+msgid "All Event Categories"
+msgstr ""
+
+#: vendor/iworks/events-taxonomy-category.php:59
+msgid "Edit Event Category"
+msgstr ""
+
+#: vendor/iworks/events-taxonomy-category.php:60
+msgid "Update Event Category"
+msgstr ""
+
+#: vendor/iworks/events-taxonomy-category.php:61
+msgid "Add New Event Category"
+msgstr ""
+
+#: vendor/iworks/events-taxonomy-category.php:62
+msgid "New Event Category Name"
+msgstr ""
+
+#: vendor/iworks/events-taxonomy-category.php:63
+msgid "Separate places with commas"
+msgstr ""
+
+#: vendor/iworks/events-taxonomy-category.php:64
+msgid "Add or remove places"
+msgstr ""
+
+#: vendor/iworks/events-taxonomy-category.php:65
+msgid "Choose from the most used event categories"
+msgstr ""
+
+#: vendor/iworks/events-taxonomy-category.php:66
+msgid "No event categories found."
+msgstr ""
+
+#: vendor/iworks/events-taxonomy-category.php:67
+msgid "Event Categories"
+msgstr ""
+
+#: vendor/iworks/events.php:260
+msgid "%s Event"
+msgid_plural "%s Events"
+msgstr[0] ""
+msgstr[1] ""
+
+#: vendor/iworks/events.php:300 vendor/iworks/events.php:320
+msgid "Settings"
+msgstr ""
+
+#: vendor/iworks/events.php:352 vendor/iworks/events.php:364
+msgid "Events"
+msgstr ""
+
+#: vendor/iworks/events.php:353 vendor/iworks/events.php:371
+msgid "Event"
+msgstr ""
+
+#: vendor/iworks/events.php:354
+msgid "Add New"
+msgstr ""
+
+#: vendor/iworks/events.php:355
+msgid "Add New Event"
+msgstr ""
+
+#: vendor/iworks/events.php:356
+msgid "Edit Event"
+msgstr ""
+
+#: vendor/iworks/events.php:357
+msgid "New Event"
+msgstr ""
+
+#: vendor/iworks/events.php:358
+msgid "All Events"
+msgstr ""
+
+#: vendor/iworks/events.php:359
+msgid "View Event"
+msgstr ""
+
+#: vendor/iworks/events.php:360
+msgid "Search Events"
+msgstr ""
+
+#: vendor/iworks/events.php:361
+msgid "No events found"
+msgstr ""
+
+#: vendor/iworks/events.php:362
+msgid "No events found in Trash"
+msgstr ""
+
+#: vendor/iworks/events.php:416
+msgid "Event misc"
+msgstr ""
+
+#: vendor/iworks/events.php:434
+msgid "Date"
+msgstr ""
+
+#: vendor/iworks/events.php:439
+msgid "Hour"
+msgstr ""
+
+#: vendor/iworks/events.php:444
+msgid "Place"
+msgstr ""
+
+#: vendor/iworks/events.php:449
+msgid "City"
+msgstr ""
+
+#: vendor/iworks/events.php:454
+msgid "Address"
+msgstr ""
+
+#: vendor/iworks/events.php:519
+msgid "peoples"
+msgstr ""
+
+#: vendor/iworks/events.php:638
+msgid "Next"
+msgstr ""
+
+#: vendor/iworks/events.php:638
+msgid "Previous"
+msgstr ""
+
+#: vendor/iworks/events.php:801
+msgid "Please copy templates from <b>%stemplates/</b> to <b>%s/</b>"
+msgstr ""
+
+#: vendor/iworks/events.php:815
+msgid ""
+"If you need to use own template, please use <b>event category</b> in menu, "
+"not a event page."
+msgstr ""
+
+#: vendor/iworks/events.php:827
+msgid ""
+"This page is using template file from plugin directory. If you want to use "
+"yuor own templates please copy it from <pre>%s</pre> to <pre>%s/</pre>"
+msgstr ""
+
+#: vendor/iworks/options.php:96
+msgid "An error occurred while getting the configuration."
+msgstr ""
+
+#: vendor/iworks/options.php:475
+msgid "Upload image"
+msgstr ""
+
+#: vendor/iworks/options.php:481
+msgid "Delete image"
+msgstr ""
+
+#: vendor/iworks/options.php:543
+msgid "Save Changes"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "iWorks Events"
+msgstr ""
+
+#. #-#-#-#-#  iworks_events.pot (iWorks Events 1.2.0)  #-#-#-#-#
+#. Plugin URI of the plugin/theme
+#. #-#-#-#-#  iworks_events.pot (iWorks Events 1.2.0)  #-#-#-#-#
+#. Author URI of the plugin/theme
+msgid "http://iworks.pl/"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Marcin Pietrzak"
+msgstr ""

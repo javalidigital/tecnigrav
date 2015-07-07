@@ -1,0 +1,5 @@
+jQuery( document ).ready( function( $ ) {
+    console.log(1);
+    $( ".datepicker" ).datepicker();
+});
+
